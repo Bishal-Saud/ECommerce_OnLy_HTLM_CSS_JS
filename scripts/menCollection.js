@@ -1,6 +1,5 @@
 const productContainer = document.querySelector('.productsBox');
-const navbar = document.querySelector('.navbar')
-navbar.style.position ='relative'
+
 async function collections(){
 
 try {
@@ -16,9 +15,15 @@ try {
        return res.json();
    })
    .then(data =>{
-       console.log('data',data);
-      const menData =  data.map((item) => {
-       // console.log(item);
+
+     localStorage.setItem("products", JSON.stringify(data));
+     
+     let productDatas = JSON.parse(localStorage.getItem("products")) ?? [];
+
+       console.log('data',productDatas);
+
+      const menData =  productDatas.map((item,index) => {
+      //  console.log(index);
 let dress= {
    name : item.name,
    brand:item.brand,
@@ -29,53 +34,57 @@ let dress= {
 
 }
 
+// console.log(dress);
+
+
+
+
+
 let card = `
 <div class="card">
                 <figure>
                   <img src="${dress.preview}" alt="t-shirt">
                 </figure>
-                <section class="details">
+                <div class="details">
                   <div class="min-details">
-                    <h1>brand name<span>${dress.brand}</span></h1>
+                    <h1>${dress.brand}<span>${dress.name}</span></h1>
                     <h1 class="price">$${dress.price}</h1>
                   </div>
-              
-                  <div class="options">
-                    <div class="options-size">
-                      <h1>sizes</h1>
-                      <ul>
-                        <li>${dress.size[0]}-s</li>
-                        <li>${dress.size[1]}-s</li>
-                        <li>${dress.size[2]}-m</li>
-                        <li>${dress.size[3]}-l</li>
-                        <li>${dress.size[4]}-xl</li>
-                      </ul>
-                    </div>
-              
-                    <div class="options-colors">
-                      <h1>colors</h1>
-                      <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                      </ul>
-                    </div>
-
-                    
+          
                   </div>
-                  <a href="#" class="btn">add to cart</a>
-                </section>
+                  <a  class="btn addBtn" >add to cart</a>
+                </div>
               </div>`
+
+
+               // Save cart
+ 
+
 
 return card
 
 
       })
+    
 
       productContainer.innerHTML = menData.join('')
+      const addBtn = document.querySelectorAll('.addBtn')
+      const counterBtn = document.querySelector('.counter')
+let count = 0;
+      addBtn.forEach((btn)=>{
+        btn.addEventListener('click',function counting(){
+         count++
+         counterBtn.innerHTML =count
+         localStorage.setItem('cart',JSON.stringify(count))
+        //  window.location.href='./pages/addTOcart.html'
+        })
+    
+      })
+counterBtn.innerHTML = localStorage.getItem('cart')
+
    })
+
+
    .catch((err)=>{
        console.log(err);
    })

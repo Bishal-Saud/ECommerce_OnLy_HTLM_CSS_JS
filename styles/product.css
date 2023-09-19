@@ -60,12 +60,12 @@ h1 {
 }
 
 .card {
-    position: relative;
+  height: 100%;
     border-radius: 5px;
     box-shadow: 0 5px 10px rgba(0,0,0,0.3);
-    height: 500px;
-    overflow: hidden;
-    width: 400px;
+    /* height: 500px; */
+    /* overflow: hidden; */
+    width: 300px;
     margin: 1rem;
     
 }
@@ -83,16 +83,15 @@ h1 {
     background-color: #FFF;
     border-radius: 10px;
     padding: 20px;
-    position: absolute;
-    top: 85%;
-    width: 100%;
-    transition: box-shadow .3s ease-in-out,
-                top .3s ease-in-out;
+    /* display: none; */
+
 }
 
 .card:hover .details {
     box-shadow: 0 -5px 10px rgba(0,0,0,0.3);
-    top: 43%;
+    display: block;
+    z-index: 2;
+
 }
 
 .details > .min-details,

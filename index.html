@@ -23,9 +23,9 @@
         <ul>
           <li><a href="#">Home</a></li>
           <li><a href="#">About</a></li>
-          <li><a href="#">Products</a></li>
+          <li><a href="/pages/addTOcart.html">Products</a></li>
           <li><a href="#">Blog</a></li>
-          <li><a href="#">Cart <i class="fa-solid fa-cart-shopping"></i></a></li>
+          <li id="cartBox"><a href="#">Cart <i class="fa-solid fa-cart-shopping"></i></a> <span class="counter">0</span></li>
          
         </ul>
       </div>
@@ -37,6 +37,8 @@
       <i class="fa-solid fa-xmark hide"></i>
     </div>
     <!-- Navbar End  -->
+
+
 
     <!-- Main section  Start-->
     <main class="main">
@@ -54,6 +56,81 @@
     </main>
 
     <!-- Main section  End-->
+
+    <!-- cartList  -->
+    <div class="cartList">
+      <i id="cartListBack" class="fa-solid fa-chevron-left"></i>
+    <div class="orderDetails">
+      <h2>Order</h2>
+      <p>Edit Card</p>
+    </div>
+    <div class="item">
+<div class="itemDetail">
+  <img src="./images/ProductsCollection/shoe1.png" alt="">
+  <div class="leftSide">
+    <h2>Item 1</h2>
+    <p>Delivery 05 May</p>
+  </div>
+<div class="rightSide">
+  <div class="iconPlus">
+    <span id="inc">+</span>
+    <span id="counter">1</span>
+    <span id="dec">-</span>
+  </div>
+  <p id="price">$10.00</p>
+</div>
+</div>
+
+<div class="itemDetail">
+  <img src="./images/ProductsCollection/shoe1.png" alt="">
+  <div class="leftSide">
+    <h2>Item 1</h2>
+    <p>Delivery 05 May</p>
+  </div>
+<div class="rightSide">
+  <div class="iconPlus">
+    <span id="inc">+</span>
+    <span id="counter">1</span>
+    <span id="dec">-</span>
+  </div>
+  <p id="price">$10.00</p>
+</div>
+</div>
+
+<div class="itemDetail">
+  <img src="./images/ProductsCollection/shoe1.png" alt="">
+  <div class="leftSide">
+    <h2>Item 1</h2>
+    <p>Delivery 05 May</p>
+  </div>
+<div class="rightSide">
+  <div class="iconPlus">
+    <span id="inc">+</span>
+    <span id="counter">1</span>
+    <span id="dec">-</span>
+  </div>
+  <p id="price">$10.00</p>
+</div>
+</div>
+
+<div class="itemDetail">
+  <img src="./images/ProductsCollection/shoe1.png" alt="">
+  <div class="leftSide">
+    <h2>Item 1</h2>
+    <p>Delivery 05 May</p>
+  </div>
+<div class="rightSide">
+  <div class="iconPlus">
+    <span id="inc">+</span>
+    <span id="counter">1</span>
+    <span id="dec">-</span>
+  </div>
+  <p id="price">$10.00</p>
+</div>
+</div>
+
+    </div>
+          </div>
 
     <!-- Product Section Start -->
     <section class="productSection">
@@ -111,6 +188,44 @@
       </h2>
       <div class="productsBox">
         <!-- productCard? -->
+        <div class="card">
+          <figure>
+            <img src="./images/ProductsCollection/watch.png" alt="t-shirt">
+          </figure>
+          <div class="details">
+            <div class="min-details">
+              <h1>brand name<span>apple watch 2023</span></h1>
+              <h1 class="price">$2000</h1>
+            </div>
+        
+            <div class="options">
+              <div class="options-size">
+                <h1>sizes</h1>
+                <ul>
+                  <li>s</li>
+                  <li>s</li>
+                  <li>m</li>
+                  <li>l</li>
+                  <li>xl</li>
+                </ul>
+              </div>
+        
+              <div class="options-colors">
+                <h1>colors</h1>
+                <ul>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+              </div>
+
+              
+            </div>
+            <a href="#" class=" btn addBtn">add to cart</a>
+          </div>
+        </div>`
     </div>
     <button>Discover More Products</button>
     </section>
@@ -120,5 +235,6 @@
     ></script>
     <script src="./scripts/menCollection.js"></script>
     <script src="scripts/script.js"></script>
+  
   </body>
 </html>
