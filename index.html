@@ -3,16 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shop-Tik</title>
+    <title>Shopi-Tik</title>
     <link rel="stylesheet" href="./styles/style.css" />
-    <link rel="stylesheet" href="./styles/product.css">
+    <link rel="stylesheet" href="./styles/product.css" />
+    <link rel="stylesheet" href="./styles/footer.css" />
   </head>
   <body>
     <!-- Navbar Start  -->
 
     <nav class="navbar">
       <div class="imgLogo">
-        <p>Shop-Tik</p>
+        <p>Shopi-Tik</p>
         <img src="./images/logo.png" alt="Logo" />
       </div>
       <div class="searchComponent">
@@ -25,8 +26,10 @@
           <li><a href="#">About</a></li>
           <li><a href="/pages/addTOcart.html">Products</a></li>
           <li><a href="#">Blog</a></li>
-          <li id="cartBox"><a href="#">Cart <i class="fa-solid fa-cart-shopping"></i></a> <span class="counter">0</span></li>
-         
+          <li id="cartBox">
+            <a href="#">Cart <i class="fa-solid fa-cart-shopping"></i></a>
+            <span class="counter">0</span>
+          </li>
         </ul>
       </div>
     </nav>
@@ -38,15 +41,13 @@
     </div>
     <!-- Navbar End  -->
 
-
-
     <!-- Main section  Start-->
     <main class="main">
       <section class="mainSec">
         <div class="leftBoxMain">
           <h2>Stay Dry and Comfy All Day Long</h2>
           <p>Thoughtfully Made Outdoor Footwear</p>
-          <button>SHOP ALL</button>
+          <button><a href="./pages/addTOcart.html">SHOP ALL</a></button>
         </div>
 
         <div class="rightBoxMain">
@@ -60,77 +61,11 @@
     <!-- cartList  -->
     <div class="cartList">
       <i id="cartListBack" class="fa-solid fa-chevron-left"></i>
-    <div class="orderDetails">
-      <h2>Order</h2>
-      <p>Edit Card</p>
+      <div class="orderDetails">
+        <h2>Order</h2>
+        <p>Edit Card</p>
+      </div>
     </div>
-    <div class="item">
-<div class="itemDetail">
-  <img src="./images/ProductsCollection/shoe1.png" alt="">
-  <div class="leftSide">
-    <h2>Item 1</h2>
-    <p>Delivery 05 May</p>
-  </div>
-<div class="rightSide">
-  <div class="iconPlus">
-    <span id="inc">+</span>
-    <span id="counter">1</span>
-    <span id="dec">-</span>
-  </div>
-  <p id="price">$10.00</p>
-</div>
-</div>
-
-<div class="itemDetail">
-  <img src="./images/ProductsCollection/shoe1.png" alt="">
-  <div class="leftSide">
-    <h2>Item 1</h2>
-    <p>Delivery 05 May</p>
-  </div>
-<div class="rightSide">
-  <div class="iconPlus">
-    <span id="inc">+</span>
-    <span id="counter">1</span>
-    <span id="dec">-</span>
-  </div>
-  <p id="price">$10.00</p>
-</div>
-</div>
-
-<div class="itemDetail">
-  <img src="./images/ProductsCollection/shoe1.png" alt="">
-  <div class="leftSide">
-    <h2>Item 1</h2>
-    <p>Delivery 05 May</p>
-  </div>
-<div class="rightSide">
-  <div class="iconPlus">
-    <span id="inc">+</span>
-    <span id="counter">1</span>
-    <span id="dec">-</span>
-  </div>
-  <p id="price">$10.00</p>
-</div>
-</div>
-
-<div class="itemDetail">
-  <img src="./images/ProductsCollection/shoe1.png" alt="">
-  <div class="leftSide">
-    <h2>Item 1</h2>
-    <p>Delivery 05 May</p>
-  </div>
-<div class="rightSide">
-  <div class="iconPlus">
-    <span id="inc">+</span>
-    <span id="counter">1</span>
-    <span id="dec">-</span>
-  </div>
-  <p id="price">$10.00</p>
-</div>
-</div>
-
-    </div>
-          </div>
 
     <!-- Product Section Start -->
     <section class="productSection">
@@ -183,21 +118,19 @@
     <!-- Looks Section End  -->
 
     <section class="productCards">
-      <h2>
-        Our Expensive Products
-      </h2>
+      <h2>Our Expensive Products</h2>
       <div class="productsBox">
         <!-- productCard? -->
         <div class="card">
           <figure>
-            <img src="./images/ProductsCollection/watch.png" alt="t-shirt">
+            <img src="./images/ProductsCollection/watch.png" alt="t-shirt" />
           </figure>
           <div class="details">
             <div class="min-details">
               <h1>brand name<span>apple watch 2023</span></h1>
               <h1 class="price">$2000</h1>
             </div>
-        
+
             <div class="options">
               <div class="options-size">
                 <h1>sizes</h1>
@@ -209,7 +142,7 @@
                   <li>xl</li>
                 </ul>
               </div>
-        
+
               <div class="options-colors">
                 <h1>colors</h1>
                 <ul>
@@ -220,21 +153,73 @@
                   <li></li>
                 </ul>
               </div>
-
-              
             </div>
-            <a href="#" class=" btn addBtn">add to cart</a>
+            <a href="#" class="btn addBtn">add to cart</a>
           </div>
-        </div>`
-    </div>
-    <button>Discover More Products</button>
+        </div>
+        `
+      </div>
+      <button>Discover More Products</button>
     </section>
+
+    <footer class="footer">
+      <div class="footerLogo">
+        <img src="./images/logo.png" alt="Logo" />
+        <h2>Shopi-Tik</h2>
+      </div>
+      <div class="socialMediaLinks">
+        <span>Contact Us :</span>
+        <i class="fa-brands fa-x-twitter"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-linkedin"></i>
+        <i class="fa-brands fa-facebook"></i>
+      </div>
+      <div class="footerLinks">
+        <div class="navFooter">
+
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+
+        <div class="navFooter">
+          <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Linkedin</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter</a></li>
+          </ul>
+        </div>
+
+        <div class="navFooter">
+          <ul>
+            <li><a href="#">New Arrivals</a></li>
+            <li><a href="#">Expensive Items</a></li>
+            <li><a href="#">Discount Coupon </a></li>
+            <li><a href="#">Budget Products</a></li>
+          </ul>
+        </div>
+
+        <div class="navFooter">
+          <ul>
+            <li><a href="#">Nepal</a></li>
+            <li><a href="#">India</a></li>
+            <li><a href="#">USA</a></li>
+            <li><a href="#">China</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
     <script
       src="https://kit.fontawesome.com/fb59a197fb.js"
       crossorigin="anonymous"
     ></script>
     <script src="./scripts/menCollection.js"></script>
     <script src="scripts/script.js"></script>
-  
+    <script src="./scripts/cartList.js"></script>
   </body>
 </html>

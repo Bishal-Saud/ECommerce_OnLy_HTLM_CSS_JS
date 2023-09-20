@@ -48,6 +48,7 @@ html {
   @media (max-width: 1000px) {
     .container {
       flex-direction: column;
+      max-width: 100%;
     }
   }
   @media (max-width: 780px) {
@@ -57,7 +58,7 @@ html {
   }
   .container .card_left {
     flex: 1 1 50%;
-    padding: 60px;
+    padding: 5px;
     /* position: relative; */
   }
   .container .card_left .fa {

@@ -19,6 +19,10 @@ body{
 h1,h2,h3,h4{
 
 }
+a{
+    text-decoration: none;
+ 
+}
 button{
     cursor: pointer;
 }
@@ -47,7 +51,7 @@ button{
 }
 .imgLogo p{
     font-weight: bold;
-    font-size:  2rem;
+    font-size:  20px;
     letter-spacing: 8px;
 }
 .imgLogo img{
@@ -349,14 +353,15 @@ opacity: 1;
 
 .cartList{
     width: 30rem;
-    border: 1px solid black;
+    border: 1px solid rgba(0, 0, 0, 0.341);
     margin: 2rem;
-    height: 43rem;
+    height: 50rem;
     position: absolute;
     top: 80px;
     right: 0;
     background: white;
     display: none;
+    border-radius: 12px;
     /* opacity: 0; */
 }
 
@@ -368,7 +373,7 @@ opacity: 1;
 
 .orderDetails{
     display: flex;
-    width: 30rem;
+    /* width: 30rem; */
     justify-content: space-between;
     align-items: center;
     padding: 5px 10px;
@@ -380,6 +385,19 @@ opacity: 1;
     /* border-bottom: 2px solid black; */
     padding-bottom: 8px;
 }
+
+#totalPrice{
+    position: absolute;
+    top: 44rem;
+    font-size: 2rem;
+    font-weight: 500;
+    left: 2rem;
+}
+#totalP{
+    font-size: 2rem;
+    width: 21rem;
+}
+
 
 
 
@@ -402,17 +420,67 @@ margin: 2rem;
     align-items: baseline;
 }
 
+.itemDetail .leftSide h2,p{
+font-size: 10px;
+width: 5rem;
+}
+
 .itemDetail .rightSide .iconPlus{
     margin: 0 20px;
 }
 
-.itemDetail .rightSide #inc,#dec{
+.itemDetail .rightSide .inc,.dec{
     border: 1px solid black;
     padding:  5px 10px;
     margin: 0 5px;
 
 
 }
-.itemDetail .rightSide #price{
+.itemDetail .rightSide .price{
     font-weight: bold;
+    font-size: 1rem;
 }
+
+
+@media screen and (max-width:600px) {
+    #totalPrice {
+        position: absolute;
+        top: 192rem;
+       
+    }
+#totalP {
+    font-size: 1rem;
+    width: 12rem;
+}
+    .cartList {
+        width: 16rem;
+        height: 200rem;
+    }
+    .iconPlus{
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    .iconPlus #counter{
+        margin: 1rem;
+    }
+
+    
+.itemDetail {
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.itemDetail .leftSide h2, p {
+    font-size: 15px;
+    width: 10rem;
+    padding: 8px;
+}
+.itemDetail img {
+    width: 15rem;
+}
+}
+

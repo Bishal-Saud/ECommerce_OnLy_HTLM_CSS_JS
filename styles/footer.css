@@ -1,0 +1,73 @@
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    /* color: black; */
+}
+
+.footer{
+    width: 100%;
+    height: 100%;
+    /* border: 2px solid rgba(0, 0, 0, 0.347); */
+    padding: 2rem;
+    background-color: #F0F0F0;
+    color: black;
+    display: flex;
+    flex-direction: column-reverse;
+}
+.footerLogo{
+    display: flex;
+flex-wrap: wrap;
+    align-items: center;
+    /* width: 28rem; */
+}
+.footerLogo img{
+    /* border: 1px solid black; */
+    border-radius: 100% 0% 78% 22% / 71% 17% 83% 29%   ;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    width: 120px;
+    transition: all 1s;
+}
+
+.footerLogo img:hover{
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+border-radius: 3% 97% 0% 100% / 41% 62% 38% 59%   ;
+transition: all 1s;
+}
+
+.footerLinks{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+}
+.footer ul li{
+    margin: 12px;
+}
+.footer ul li a{
+    color: black;
+}
+
+.socialMediaLinks {
+    text-align: center;
+}
+
+.socialMediaLinks span{
+    text-align: center;
+ 
+}
+.socialMediaLinks i{
+    font-size: 2rem;
+    margin: 1rem;
+  
+
+}
+.socialMediaLinks i:hover{
+    color: teal;
+}
+
+.navFooter {
+    
+}

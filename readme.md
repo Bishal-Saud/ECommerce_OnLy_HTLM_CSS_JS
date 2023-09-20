@@ -7,3 +7,8 @@ Day 2 - 9/19/2023.
 -cart
 -product detail page
 -cart counter 
+
+Day 3 - 3//20/2023
+-cart add 
+-cart price add and sub
+-play with api on cart and save on localStorage
