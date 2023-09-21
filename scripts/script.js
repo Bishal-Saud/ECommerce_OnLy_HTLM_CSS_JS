@@ -3,8 +3,8 @@ const navbar = document.querySelector(".navbar");
 const bar = document.querySelector(".fa-bars");
 const cross = document.querySelector(".fa-xmark");
 const cartBox = document.getElementById("cartBox");
-const cartList = document.querySelector(".cartList");
-const cartListBack = document.getElementById('cartListBack')
+const cartLists = document.querySelector(".cartList");
+
 showHam.addEventListener("click", () => {
   if (bar) {
     bar.classList.toggle("hide");
@@ -14,21 +14,16 @@ showHam.addEventListener("click", () => {
 });
 
 
-cartListBack.addEventListener('click',()=>{
-        cartList.style.display = 'none'; // Hide cartList
 
-})
-
-let isCartListVisible = false
+let isCartListVisible = false;
 
 cartBox.addEventListener("click", () => {
-    if (isCartListVisible) {
-        cartList.style.display = 'none'; // Hide cartList
-    } else {
-        cartList.style.display = 'block'; // Show cartList
-    }
-    
-    // Toggle the state
-    isCartListVisible = !isCartListVisible;
+  if (isCartListVisible) {
+    cartLists.style.display = "none"; // Hide cartList
+  } else {
+    cartLists.style.display = "block"; // Show cartList
+  }
 
-})
+  // Toggle the state
+  isCartListVisible = !isCartListVisible;
+});

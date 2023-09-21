@@ -48,6 +48,15 @@ transition: all 1s;
 }
 .footer ul li a{
     color: black;
+    transition: all 0.5s;
+
+}
+
+.footer ul li a:hover{
+    padding-bottom: 3px;
+    border-bottom: 5px solid #2C5364;
+    transition: all 0.5s;
+
 }
 
 .socialMediaLinks {
