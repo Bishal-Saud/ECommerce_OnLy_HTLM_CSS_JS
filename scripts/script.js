@@ -5,6 +5,7 @@ const cross = document.querySelector(".fa-xmark");
 const cartBox = document.getElementById("cartBox");
 const cartLists = document.querySelector(".cartList");
 
+//Navbar hamburger show and hide 
 showHam.addEventListener("click", () => {
   if (bar) {
     bar.classList.toggle("hide");
@@ -13,7 +14,11 @@ showHam.addEventListener("click", () => {
   }
 });
 
+// hide Carts when clicked left cross btn
+function hideCart(){
+    cartLists.style.display = "none"; // Hide cartList
 
+}
 
 let isCartListVisible = false;
 
@@ -27,3 +32,10 @@ cartBox.addEventListener("click", () => {
   // Toggle the state
   isCartListVisible = !isCartListVisible;
 });
+
+// Function to hide the cartList
+
+
+
+  
+

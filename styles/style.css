@@ -369,6 +369,9 @@ opacity: 1;
 
 /* Order List Cart */
 
+i{
+    cursor: pointer;
+}
 
 .cartList{
     width: 30rem;
@@ -403,6 +406,8 @@ padding: 1.5rem;
 .orderDetails h2,p{
     /* border-bottom: 2px solid black; */
     padding-bottom: 8px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 #totalPrice{
@@ -418,7 +423,9 @@ padding: 1.5rem;
    
 }
 
-
+.backCart{
+    cursor: pointer;
+}
 
 
 .itemDetail{

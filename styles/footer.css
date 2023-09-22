@@ -41,7 +41,7 @@ transition: all 1s;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-
+    gap: 2rem 6rem;
 }
 .footer ul li{
     margin: 12px;

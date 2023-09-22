@@ -2,6 +2,8 @@ let container = document.querySelector('.productContainer')
 
 let productDatas = JSON.parse(localStorage.getItem("products")) ?? [];
 
+
+
 function details() {
     const menData = productDatas.map((item, index) => {
       let dress = {
