@@ -5,43 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add to Cart</title>
     <link rel="stylesheet" href="../styles/addCart.css">
+    <link rel="stylesheet" href="../styles/style.css">
 </head>
 <body>
 
+     <!-- Navbar Start  -->
+
+     <nav class="navbar">
+        <div class="imgLogo">
+          <p> <a href="../index.html">Shopi-Tik</a></p>
+          <img src="../images/logo.png" alt="Logo" />
+        </div>
+        <div class="searchComponent">
+          <input id="search" type="text" placeholder="Search Products" />
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <div class="navLink">
+          <ul>
+          <li><a href="../index.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="/pages/addTOcart.html">Products</a></li>
+            <li><a href="#">Blog</a></li>
+            <li id="cartBox">
+              <a href="#">Cart <i class="fa-solid fa-cart-shopping"></i></a>
+              <span class="counter">0</span>
+            </li>
+          </ul>
+        </div>
+      </nav>
+  
+      <div class="showHam">
+        <i class="fa-solid fa-bars"></i>
+  
+        <i class="fa-solid fa-xmark hide"></i>
+      </div>
+      <!-- Navbar End  -->
+  
     
     
 
-        <div class="source">
-   <a href="../index.html">Back</a>
-      </div>
+        <!-- <div class="source">
+   <a href="../index.html">Back to Home</a>
+      </div> -->
     <div class="productContainer">
 
-  <div class="container card">
-          <div class="card_left">
-              <a href="#"><i class="fa fa-long-arrow-left left" aria-hidden="true"></i></a>
-              <a href="#"><i class="fa fa-long-arrow-right right" aria-hidden="true"></i></a>
-              <img src="http://res.cloudinary.com/dzkfmthai/image/upload/v1498119804/card_img_zghqta.jpg">
-          </div>
-          <div class="card_right">
-              <span>global chair</span>
-              <h3>Eero Aarnio Style Ball Chair</h3>
-              <p>Our Reproduction of the Aarnio Ball Chair comes in a selection of colors and meets the architectural specifications of the original. </p>
-              <div class="colours">
-                  <div class="colour orange active"></div>
-                  <div class="colour green"></div>
-                  <div class="colour gray"></div>
-              </div>
-              <div class="card_footer">
-                  <span class="price">$890</span>
-                  <a href="#" class="btn">
-                      buy now
-                  </a>
-              </div>
-          </div>
-      </div>
+  <h2 class="expensiveProducts">Some Expensive Product details <i class="fa-solid fa-truck-fast"></i></h2>
     </div>
 
-
+    <script
+    src="https://kit.fontawesome.com/fb59a197fb.js"
+    crossorigin="anonymous"
+  ></script>
     <script src="../scripts/addCart.js"></script>
+    <script src="../scripts/script.js"></script>
 </body>
 </html>

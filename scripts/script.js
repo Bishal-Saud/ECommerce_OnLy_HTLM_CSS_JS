@@ -1,4 +1,4 @@
-const showHam = document.querySelector(".showHam");
+const showHam = document.querySelectorAll(".showHam");
 const navbar = document.querySelector(".navbar");
 const bar = document.querySelector(".fa-bars");
 const cross = document.querySelector(".fa-xmark");
@@ -6,13 +6,16 @@ const cartBox = document.getElementById("cartBox");
 const cartLists = document.querySelector(".cartList");
 
 //Navbar hamburger show and hide 
-showHam.addEventListener("click", () => {
-  if (bar) {
-    bar.classList.toggle("hide");
-    navbar.classList.toggle("show");
+showHam.forEach((btn)=>{
+
+  btn.addEventListener("click", () => {
+    if (bar) {
+      bar.classList.toggle("hide");
+      navbar.classList.toggle("show");
     cross.classList.toggle("hide");
   }
 });
+})
 
 // hide Carts when clicked left cross btn
 function hideCart(){

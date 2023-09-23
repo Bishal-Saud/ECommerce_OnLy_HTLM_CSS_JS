@@ -1,7 +1,8 @@
 let container = document.querySelector('.productContainer')
 
-let productDatas = JSON.parse(localStorage.getItem("products")) ?? [];
+let productDatas = JSON.parse(localStorage.getItem('products')) || [];
 
+   
 
 
 function details() {
@@ -38,7 +39,7 @@ function details() {
             </div>
             <div class="card_footer">
               <span class="price">$${dress.price}</span>
-              <a href="#" class="btn">
+              <a href="#" class="btn addBtn">
                 buy now
               </a>
             </div>
@@ -51,11 +52,12 @@ function details() {
           </div>
         </div>
       `;
+      container.insertAdjacentHTML('beforeend', boxDetails);
   
       return { boxDetails, previewId, photosId };
     });
   
-    container.innerHTML = menData.map((data) => data.boxDetails).join('');
+   
   
     // Add click event listener to each set of thumbnail photos
     menData.forEach((data) => {
@@ -70,6 +72,8 @@ function details() {
       });
     });
   }
-  
+  // ......
+
+
   details();
   

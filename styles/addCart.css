@@ -1,13 +1,13 @@
 html {
     height: 100%;
   }
-  body {
-    /* background: linear-gradient(30deg, #cbc1bf 0%, rgba(230, 229, 228, 0.98) 100%);
-    font-family: 'Montserrat', sans-serif;
-    color: #262626;
-    min-height: 100%;
-    margin: 0; */
+  
+  a{
+    text-decoration: none;
+    color: unset;
   }
+
+  
   .source {
     background-color: #0057ff;
     color: #fff;
@@ -43,7 +43,7 @@ html {
     box-shadow: 0px 11px 46.44px 7.56px rgba(0, 0, 0, 0.44);
     top: 3rem;
     /* position: relative; */
-    margin: 2rem 0;
+    margin: 5rem 0;
   }
   @media (max-width: 1000px) {
     .container {

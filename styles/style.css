@@ -45,6 +45,7 @@ a{
 button{
     cursor: pointer;
 }
+
 /* Navbar css Start  */
 .navbar{
     display: flex;
@@ -257,7 +258,7 @@ width: 16rem;
 /* Looks Section End */
 .showHam{
     display: none;
-    right: 1rem;
+    right: 3rem;
     position: absolute;
     top: 8px;
     width: 2rem;
@@ -447,7 +448,7 @@ margin: 2rem;
     align-items: baseline;
 }
 
-.itemDetail .leftSide h2,p{
+.itemDetail .leftSide .itemName,itemDeliveryDate{
 font-size: 10px;
 width: 5rem;
 }
@@ -470,18 +471,17 @@ width: 5rem;
 
 
 @media screen and (max-width:600px) {
-    #totalPrice {
-        position: absolute;
-        top: 192rem;
-       
+
+    .buyBtn{
+        padding: 10px 21px;
     }
 #totalP {
     font-size: 1rem;
     width: 12rem;
 }
     .cartList {
-        width: 16rem;
-        /* height: 200rem; */
+        width: 20rem;
+        margin: auto;
     }
     .iconPlus{
         
@@ -497,17 +497,25 @@ width: 5rem;
 
     
 .itemDetail {
-    flex-direction: column;
+    flex-direction: row;
     padding: 1rem;
 }
+.itemDetail .rightSide{
+    flex-direction: column;
+}
+.itemDetail .leftSide{
+    display: flex;
+    flex-direction: column;
 
-.itemDetail .leftSide h2, p {
-    font-size: 15px;
-    width: 10rem;
-    padding: 8px;
+}
+
+.itemDetail .leftSide .itemName, .itemDeliveryDate {
+    font-size: 11px;
+    width: 5rem;
+    padding: 4px;
 }
 .itemDetail img {
-    width: 15rem;
+    width: 5rem;
 }
 }
 
