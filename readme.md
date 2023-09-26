@@ -25,3 +25,8 @@ Day 6 - 9/23/2023
 -Added a navbar and product section.
 -Ensured responsiveness.
 -Completed the cart section with full functionality, including adding, deleting, and automatically removing items from the cart when their quantity reaches zero.
+
+Still Remaining some problems on counter
+
+Day 7,8 - 9/26/2023
+making about page and all page responsive

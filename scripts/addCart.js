@@ -39,7 +39,7 @@ function details() {
             </div>
             <div class="card_footer">
               <span class="price">$${dress.price}</span>
-              <a href="#" class="btn addBtn">
+              <a href="#" class="btn ">
                 buy now
               </a>
             </div>

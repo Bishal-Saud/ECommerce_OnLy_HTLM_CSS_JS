@@ -15,6 +15,22 @@ body{
     scroll-behavior: smooth;
  
 }
+
+.webName{
+    align-items: baseline;
+}
+.webName i{
+    padding: 0 1rem;
+font-size: 1.5rem;
+color: #f37d3a;
+
+}
+.webName span{
+color: #f37d3a;
+font-weight: bold;
+
+
+}
 .buyBtn{
     
         text-decoration: none;
@@ -30,8 +46,8 @@ body{
         border: none;
         outline: none;
     transition: 0.8s all;
-
 }
+
 .buyBtn:hover{
     background: #ffffff;
     color: black;
@@ -48,11 +64,12 @@ button{
 
 /* Navbar css Start  */
 .navbar{
+    margin: 1rem 0;
     display: flex;
     /* border: 1px solid black; */
     flex-wrap: wrap;
     align-items: center;
-    padding: 0 2rem;
+    /* padding: 0 2rem; */
     justify-content: space-evenly;
     /* position: fixed; */
     width: 100%;
@@ -306,6 +323,8 @@ opacity: 1;
     justify-content: flex-start;
     align-items: flex-start;
     transition: all 0.5s;
+    padding: 0 5rem;
+
 
     }
 
@@ -446,6 +465,8 @@ margin: 2rem;
 .itemDetail .rightSide{
     display: flex;
     align-items: baseline;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .itemDetail .leftSide .itemName,itemDeliveryDate{
@@ -519,3 +540,30 @@ width: 5rem;
 }
 }
 
+.scale-up-center {
+	-webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+
+ @-webkit-keyframes scale-up-center {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  @keyframes scale-up-center {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  

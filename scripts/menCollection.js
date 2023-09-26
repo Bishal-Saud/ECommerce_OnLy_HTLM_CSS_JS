@@ -64,7 +64,6 @@ async function collections() {
     // Add cartLists on Cart button
     const addBtn = document.querySelectorAll(".addBtn");
     const cartList = document.querySelector(".cartList");
-    let count = 0;
     let carts = [];
 
     let totalPrice = 0;
@@ -102,9 +101,8 @@ async function collections() {
         </div>`;
 
       totalPrice += cart.price;
-      cartList.insertAdjacentHTML('beforeend', itemList);
-
-      
+      cartList.insertAdjacentHTML("beforeend", itemList);
+      // cartList.innerHTML += itemList
 
       // cart functionality to add sub the money
 
@@ -114,8 +112,6 @@ async function collections() {
       const priceElements = document.querySelectorAll(".price");
       const totalPrices = document.getElementById("totalP");
 
-      
-
       // Check if the item exists in localStorage, if not, hide it
       if (
         !localStorage.getItem("carts") ||
@@ -124,75 +120,76 @@ async function collections() {
         const itemDetail = document.querySelector(
           `[data-item-id="${item.id}"]`
         );
-       
+
         if (itemDetail) {
           itemDetail.style.display = "none";
         }
       }
-  
 
-      const deleteItems = document.querySelectorAll(`[data-deleteItem-id="${item.id}"]`);
-     // Attach a click event listener to each deleteItem element
-  deleteItems.forEach((deleteItem) => {
-    deleteItem.addEventListener('click', () => {
-      // Retrieve the item to delete based on the unique identifier
-      const itemIdToDelete = deleteItem.getAttribute('data-deleteItem-id');
-      const itemToDelete = carts.find((item) => item.id === itemIdToDelete);
+      const deleteItems = document.querySelectorAll(
+        `[data-deleteItem-id="${item.id}"]`
+      );
+      // Attach a click event listener to each deleteItem element
+      deleteItems.forEach((deleteItem) => {
+        deleteItem.addEventListener("click", () => {
+          // Retrieve the item to delete based on the unique identifier
+          const itemIdToDelete = deleteItem.getAttribute("data-deleteItem-id");
+          const itemToDelete = carts.find((item) => item.id === itemIdToDelete);
 
-      // Remove the item from the carts array
-      const itemIndex = carts.indexOf(itemToDelete);
-      if (itemIndex !== -1) {
-        carts.splice(itemIndex, 1);
-      }
+          // Remove the item from the carts array
+          const itemIndex = carts.indexOf(itemToDelete);
+          if (itemIndex !== -1) {
+            carts.splice(itemIndex, 1);
+          }
 
-        
-    
-        // Update the localStorage with the updated cart items
+          // Update the localStorage with the updated cart items
 
-      // Retrieve the item's detail element based on the unique identifier
-      const itemDetailToDelete = document.querySelector(`[data-item-id="${itemIdToDelete}"]`);
+          // Retrieve the item's detail element based on the unique identifier
+          const itemDetailToDelete = document.querySelector(
+            `[data-item-id="${itemIdToDelete}"]`
+          );
 
-      // Remove the item's DOM element
-      if (itemDetailToDelete) {
-        itemDetailToDelete.remove();
-      }
+          // Remove the item's DOM element
+          if (itemDetailToDelete) {
+            itemDetailToDelete.remove();
+          }
 
-      // Update the total price and save the updated cart
-     
-      totalPrice -= itemToDelete.price;
-      updateTotalPrice(totalPrice);
-      saveCartToLocalStorage(carts);
-      localStorage.setItem("carts", JSON.stringify(carts));
+          // Update the total price and save the updated cart
 
-    });
-  });
-    
- 
+          totalPrice -= itemToDelete.price;
+          updateTotalPrice(totalPrice);
+          saveCartToLocalStorage(carts);
 
+          localStorage.setItem("carts", JSON.stringify(carts));
+        });
+      });
 
       // to increment the price and items
       increment.forEach((btn, index) => {
-        btn.addEventListener("click", () => {
-          let add = parseInt(counters[index].textContent);
+        counters[index].innerHTML = "0";
 
+        let add = parseInt(counters[index].textContent);
+        btn.addEventListener("click", () => {
           add++;
 
-          counters[index].textContent = add;
+          if (add) {
+            counters[index].textContent = add;
+          }
 
           let itemPrice = parseFloat(
             priceElements[index].getAttribute("data-price")
           );
           totalPrice += itemPrice;
           priceElements[index].textContent = `$${itemPrice * add}`;
-
           updateTotalPrice(totalPrice);
         });
       });
 
       // to decrement the price and items
       decrement.forEach((btn, index) => {
+        let sub = parseInt(counters[index].textContent);
+       
         btn.addEventListener("click", () => {
-          let sub = parseInt(counters[index].textContent);
           sub--;
           counters[index].textContent = sub;
           let itemPrice = parseFloat(
@@ -218,30 +215,27 @@ async function collections() {
       }
     }
 
-
     function deleteCart(itemId) {
       // Get the cart items from localStorage
       let cartItems = JSON.parse(localStorage.getItem("carts")) || [];
-    
+
       // Find the index of the item with the given ID
       const index = cartItems.findIndex((item) => item.id === itemId);
-      
-    
-      if (index !== -1 || 1 ) {
+
+      if (index !== -1 || 1) {
         // Remove the item at the found index
         cartItems.splice(index, 1);
-    
+
         // Update the localStorage with the updated cart items
         localStorage.setItem("carts", JSON.stringify(cartItems));
-    
+
         // Remove the item from the cart displayed on the webpage
         const itemDetail = document.querySelector(`[data-item-id="${itemId}"]`);
-        if (itemDetail ) {
+        if (itemDetail) {
           itemDetail.remove();
         }
       }
     }
-    
 
     function saveCartToLocalStorage(cartArray) {
       localStorage.setItem("carts", JSON.stringify(cartArray));
@@ -268,6 +262,7 @@ async function collections() {
     });
 
     //it is for create countCart and also pass data from LocalStorage when add cart clicked from web products section.
+    let count = 0;
 
     addBtn.forEach((btn, index) => {
       btn.addEventListener("click", function counting() {
@@ -284,8 +279,7 @@ async function collections() {
         showCart(item);
       });
     });
-    counterBtn.innerHTML = JSON.parse(localStorage.getItem("carts")).length
-
+    counterBtn.innerHTML = JSON.parse(localStorage.getItem("carts")).length;
   } catch (error) {
     console.log(error);
   }

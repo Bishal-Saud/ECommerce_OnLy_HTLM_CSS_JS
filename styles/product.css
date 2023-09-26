@@ -170,6 +170,7 @@ h1 {
 }
 
 .btn {
+    cursor: pointer;
     background-color: #192a56;
     border-radius: 5px;
     color: #FFF;

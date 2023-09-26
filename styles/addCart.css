@@ -33,6 +33,11 @@ html {
     align-items: center;
     
   }
+  .expensiveProducts{
+    margin-top: 6rem;
+    padding: 0 2rem;
+  }
+
   .container {
     border: 1px solid transparent;
     background-color: #fff;
