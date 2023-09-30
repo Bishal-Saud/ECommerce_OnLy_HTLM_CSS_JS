@@ -1,0 +1,66 @@
+.product-filter_sec{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 12rem;
+}
+
+.product_filter-boxes{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2rem 0;
+    justify-content: center;
+}
+
+.product-filter_sec-search #product_search{
+    width: 41rem;
+    padding: 10px;
+
+}
+
+.product_filter-boxes .product_filter-box{
+    margin: 3rem;
+}
+
+.product-filter_sec .product-filter-select{
+    padding: 10px;
+}
+
+
+
+/* CSS */
+.product_search-btn {
+  background-color: rgba(51, 51, 51, 0.05);
+  border-radius: 8px;
+  border-width: 0;
+  color: #333333;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  list-style: none;
+  margin: 2rem;
+  padding: 10px 12px;
+  text-align: center;
+  transition: all 200ms;
+  vertical-align: baseline;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+@media screen and (max-width:746px) {
+
+    .product-filter_sec-search #product_search {
+        width: 18rem;
+    }
+.product-filter_sec-search{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+}

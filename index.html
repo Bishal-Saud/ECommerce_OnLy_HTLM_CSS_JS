@@ -7,16 +7,16 @@
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/product.css" />
     <link rel="stylesheet" href="./styles/footer.css" />
-   
- 
+    <link rel="stylesheet" href="./styles/product-filter-sec.css" />
   </head>
   <body>
     <!-- Navbar Start  -->
 
     <nav class="navbar scale-up-center">
-      <p class="webName">@Premium-<span>Hub</span><i class="fa-solid fa-sack-dollar"></i></p>
+      <p class="webName">
+        @Premium-<span>Hub</span><i class="fa-solid fa-sack-dollar"></i>
+      </p>
       <div class="imgLogo">
-       
         <!-- <img src="./images/logo.png" alt="Logo" /> -->
       </div>
       <div class="searchComponent">
@@ -27,13 +27,32 @@
         <ul>
           <li><a href="./index.html">Home</a></li>
           <li><a href="./pages/about.html">About</a></li>
-          <li><a href="/pages/addTOcart.html">Products</a></li>
+          <li><a href="/pages/addTOcart.html" id="products">Products</a></li>
           <li><a href="#">Blog</a></li>
           <li id="cartBox">
             <a href="#">Cart <i class="fa-solid fa-cart-shopping"></i></a>
             <span class="counter">0</span>
           </li>
         </ul>
+      </div>
+
+      <div class="product-links">
+        <li><a href="./index.html">Men's Clothes</a></li>
+        <li><a href="./pages/about.html">Women Clothes</a></li>
+        <li><a href="/pages/addTOcart.html">Shoes</a></li>
+        <li><a href="#">T-Shirt</a></li>
+        <li><a href="./index.html">Shirt Pant</a></li>
+        <li><a href="./pages/about.html">New Arrivals</a></li>
+        <li><a href="/pages/addTOcart.html">Old Fashion</a></li>
+        <li><a href="#">Hip-Hop</a></li>
+        <li><a href="./index.html">Expensive Products</a></li>
+        <li><a href="./pages/about.html">Sales</a></li>
+        <li><a href="/pages/addTOcart.html">Cups</a></li>
+        <li><a href="#">School Dress</a></li>
+        <li><a href="./index.html">Night Dress</a></li>
+        <li><a href="./pages/about.html">Swimming costume</a></li>
+        <li><a href="/pages/addTOcart.html">Jersey's</a></li>
+        <li><a href="#">Half T-Shirts</a></li>
       </div>
     </nav>
 
@@ -47,7 +66,6 @@
     <!-- Main section  Start-->
     <main class="main">
       <section class="mainSec activeSec">
-        
         <div class="leftBoxMain">
           <p class="webName">@Premium-<span>Hub</span></p>
 
@@ -60,15 +78,13 @@
           <img src="./images/shoe.png" alt="mainImg" />
         </div>
       </section>
-
     </main>
 
     <!-- Main section  End-->
 
     <!-- cartList  -->
     <div class="cartList">
-   
-      <div  class="orderDetails">
+      <div class="orderDetails">
         <div class="backCart" onclick="hideCart()">
           <i class="fa-solid fa-delete-left"></i>
         </div>
@@ -78,7 +94,7 @@
 
       <div id="totalPrice">
         <p id="totalP">Total Price: <span></span></p>
-            </div>
+      </div>
     </div>
 
     <!-- Product Section Start -->
@@ -89,7 +105,7 @@
       </h2>
 
       <div class="products">
-        <div class="product-shoe">
+        <div class="product-shoe" id="shoesCollection">
           <div class="shoeImg">
             <img src="./images/ProductsCollection/shoe1.png" alt="" />
           </div>
@@ -100,7 +116,9 @@
           <div class="shoeImg">
             <img src="./images/ProductsCollection/T-shirt.png" alt="" />
           </div>
-          <a href="#">T-Shirt<i class="fa-solid fa-arrow-right"></i></a>
+          <a href="#" id="tShirt"
+            >T-Shirt<i class="fa-solid fa-arrow-right"></i
+          ></a>
         </div>
 
         <div class="product-shoe">
@@ -120,6 +138,90 @@
     </section>
     <!-- Product Section End -->
 
+    <!-- filter Section Start--  -->
+    <section class="product-filter_sec">
+      <div class="product-filter_sec-search">
+        <input type="text" placeholder="Search" id="product_search" />
+        <button class="product_search-btn">Search</button>
+      </div>
+      <div class="product_filter-boxes">
+        <!-- product_filter-box-1 -->
+        <form action="#" class="product_filter-box product_filter-box-1">
+          <select
+            name="Items"
+            class="product-filter-select"
+            id="product-filter_sec-items-1">
+            <option value="selectclothes">Select Clothes</option>
+            <option value="showAll">Show All</option>
+            <option  value="shoes">Shoes</option>
+            <option value="T-shirt">T-Shirt</option>
+            <option value="pant">Pant</option>
+          </select>
+        </form>
+        <!-- product_filter-box-2 -->
+        <form action="#" class="product_filter-box product_filter-box-2">
+          <select
+            name="Items"
+            class="product-filter-select"
+            id="product-filter_sec-items-2">
+            <option value="selectbrand">Select Brand</option>
+            <option value="showall">Show All</option>
+            <option value="universe">Universe</option>
+            <option value="Nike">Nike</option>
+            <option value="toto">Toto</option>
+          </select>
+        </form>
+        <!-- product_filter-box-3 -->
+
+        <form action="#" class="product_filter-box product_filter-box-3">
+          <select
+            name="Items"
+            class="product-filter-select"
+            id="product-filter_sec-items-3">
+            <option value="selecttype">Select Type</option>
+            <option value="showall">Show All</option>
+            <option value="Men">Men</option>
+            <option value="women">Women</option>
+            <option value="forall">For All</option>
+          </select>
+        </form>
+        <!-- product_filter-box-4 -->
+
+        <form action="#" class="product_filter-box product_filter-box-4">
+          <select
+            name="Items"
+            class="product-filter-select"
+            id="product-filter_sec-items-4">
+            <option value="showall">Select Price Range</option>
+            <option value="showall">Show All</option>
+            <option value="lower">Lower To Higher</option>
+            <option value="higher">Higher to Lower</option>
+            <option value="all">All Price</option>
+          </select>
+        </form>
+      </div>
+    </section>
+
+    <!-- filter Section End--  -->
+
+    <section class="productCards">
+      <h2>Our Expensive Products</h2>
+      <div id="tShirtContainer">
+        <!-- tshirts? -->
+      </div>
+      <div id="pantContainer">
+        <!-- pantContainer? -->
+      </div>
+
+      <div id="shoesContainer">
+        <!-- shoes? -->
+      </div>
+      <div class="productsBox">
+        <!-- productCard? -->
+      </div>
+      <button>Discover More Products</button>
+    </section>
+
     <!-- Looks Section Start  -->
     <section class="lookSec">
       <h2>Autumn 2023 Lookbook</h2>
@@ -131,59 +233,13 @@
 
     <!-- Looks Section End  -->
 
-    <section class="productCards">
-      <h2>Our Expensive Products</h2>
-      <div class="productsBox">
-        <!-- productCard? -->
-        <div class="card">
-          <figure>
-            <img src="./images/ProductsCollection/watch.png" alt="t-shirt" />
-          </figure>
-          <div class="details">
-            <div class="min-details">
-              <h1>brand name<span>apple watch 2023</span></h1>
-              <h1 class="price">$2000</h1>
-            </div>
-
-            <div class="options">
-              <div class="options-size">
-                <h1>sizes</h1>
-                <ul>
-                  <li>s</li>
-                  <li>s</li>
-                  <li>m</li>
-                  <li>l</li>
-                  <li>xl</li>
-                </ul>
-              </div>
-
-              <div class="options-colors">
-                <h1>colors</h1>
-                <ul>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                </ul>
-              </div>
-            </div>
-            <a href="#" class="btn addBtn">add to cart</a>
-          </div>
-        </div>
-        `
-      </div>
-      <button>Discover More Products</button>
-    </section>
-
-
-
     <!-- Footer Here  -->
     <footer class="footer">
       <div class="footerLogo">
         <img src="./images/logo.png" alt="Logo" />
-        <p class="webName">@Premium-<span>Hub</span><i class="fa-solid fa-sack-dollar"></i></p>
-
+        <p class="webName">
+          @Premium-<span>Hub</span><i class="fa-solid fa-sack-dollar"></i>
+        </p>
       </div>
       <div class="socialMediaLinks">
         <span>Contact Us :</span>
@@ -238,16 +294,22 @@
       </div>
     </footer>
 
+    <!-- Footer End  -->
+
     <script
       src="https://kit.fontawesome.com/fb59a197fb.js"
       crossorigin="anonymous"
     ></script>
     <script src="./scripts/menCollection.js"></script>
-  
+
     <script src="scripts/script.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-
-
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>

@@ -30,3 +30,6 @@ Still Remaining some problems on counter
 
 Day 7,8 - 9/26/2023
 making about page and all page responsive
+
+Day-9,10,11,12- 9/30/2023
+implementing all features of filter of products

@@ -1,13 +1,18 @@
 const productContainer = document.querySelector(".productsBox");
 const counterBtn = document.querySelector(".counter");
 const backCart = document.querySelector(".backCart");
+const shoesContainer = document.getElementById("shoesContainer");
+const filterItem1 = document.getElementById("product-filter_sec-items-1")
+const tShirtContainer = document.getElementById("tShirtContainer")
+const menClothes = document.getElementById('tShirt')
+const pantContainer = document.getElementById('pantContainer')
+let apiUrl = "https://5d76bf96515d1a0014085cf9.mockapi.io/product";
 
 //Fetching data from individual link for generate products
 async function collections() {
+  // https://fakestoreapi.com/products from this api fetch men t shirt data ----- TODO
   try {
-    let resp = await fetch(
-      "https://5d76bf96515d1a0014085cf9.mockapi.io/product"
-    );
+    let resp = await fetch(apiUrl);
 
     // Some checks data is coming or not
     if (resp.ok) {
@@ -59,7 +64,10 @@ async function collections() {
       return card;
     });
 
-    productContainer.innerHTML = menData.join("");
+    if(productContainer.innerHTML === null || undefined || " "){
+
+      productContainer.innerHTML = menData.join("");
+    }
 
     // Add cartLists on Cart button
     const addBtn = document.querySelectorAll(".addBtn");
@@ -188,7 +196,7 @@ async function collections() {
       // to decrement the price and items
       decrement.forEach((btn, index) => {
         let sub = parseInt(counters[index].textContent);
-       
+
         btn.addEventListener("click", () => {
           sub--;
           counters[index].textContent = sub;
@@ -286,3 +294,263 @@ async function collections() {
 }
 
 collections();
+
+const allShoes = [
+  {
+    id: 1,
+    name: "Wild Rider Layers Unisex Sneakers",
+    price: "$121",
+    image:
+      "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/380697/02/sv01/fnd/IND/fmt/png/,Wild-Rider-Layers-Unisex-Sneakers",
+    description:
+      "With design elements inspired by the movement and motion of city life, the Wild Rider Layers Unisex. With design elements inspired by the movement and motion of city life, the Wild Rider Layers Unisex Sneakers brings a fresh new dimension to the iconic Rider family.",
+  },
+  {
+    id: 2,
+    name: "Wild Rider Layers 2 Unisex Sneakers",
+    price: "$151",
+    image:
+      "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/380697/03/sv01/fnd/IND/fmt/png/Wild-Rider-Layers-Unisex-Sneakers",
+    description:
+      "With design elements inspired by the movement and motion of city life, the Wild Rider Layers Unisex. With design elements inspired by the movement and motion of city life, the Wild Rider Layers Unisex Sneakers brings a fresh new dimension to the iconic Rider family.",
+  },
+  {
+    id: 3,
+    name: "Wild Rider Layers Unisex3 sneakers",
+    price: "$161",
+    image:
+      "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/380697/01/sv01/fnd/IND/fmt/png/Wild-Rider-Layers-Unisex-Sneakers",
+    description:
+      "With design elements inspired by the movement and motion of city life, the Wild Rider Layers Unisex. With design elements inspired by the movement and motion of city life, the Wild Rider Layers Unisex Sneakers brings a fresh new dimension to the iconic Rider family.",
+  },
+  {
+    id: 4,
+    name: "PUMA Serve Pro Lite Unisex shoes",
+    price: "$261",
+    image:
+      "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/374902/01/sv01/fnd/IND/fmt/png/PUMA-Serve-Pro-Lite-Unisex-Shoes",
+    description:
+      "With design elements inspired by the movement and motion of city life, the Wild Rider Layers Unisex. With design elements inspired by the movement and motion of city life, the Wild Rider Layers Unisex Sneakers brings a fresh new dimension to the iconic Rider family.",
+  },
+  {
+    id: 5,
+    name: "PUMA Serve Pro Lite Unisex",
+    price: "$321",
+    image:
+      "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/374902/11/sv01/fnd/IND/fmt/png/PUMA-Serve-Pro-Lite-Unisex-Shoes",
+    description:
+      "With design elements inspired by the movement and motion of city life, the Wild Rider Layers Unisex. With design elements inspired by the movement and motion of city life, the Wild Rider Layers Unisex Sneakers brings a fresh new dimension to the iconic Rider family.",
+  },
+  {
+    id: 6,
+    name: "one8 Virat Kohli Basket Classice Unisex Sneakers",
+    price: "$371",
+    image:
+      "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/375314/01/sv01/fnd/IND/fmt/png/one8-Virat-Kohli-Basket-Classic-Unisex-Sneakers",
+    description:
+      "With design elements inspired by the movement and motion of city life, the Wild Rider Layers Unisex. With design elements inspired by the movement and motion of city life, the Wild Rider Layers Unisex Sneakers brings a fresh new dimension to the iconic Rider family.",
+  },
+  {
+    id: 7,
+    name: "Caracal SoftFoam+Sneakers",
+    price: "$171",
+    image:
+      "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/369863/18/sv01/fnd/IND/fmt/png/Caracal-SoftFoam+-Sneakers",
+    description:
+      "With design elements inspired by the movement and motion of city life, the Wild Rider Layers Unisex. With design elements inspired by the movement and motion of city life, the Wild Rider Layers Unisex Sneakers brings a fresh new dimension to the iconic Rider family.",
+  },
+  {
+    id: 8,
+    name: "Mirage Mox Brightly Packed Shoes",
+    price: "$271",
+    image:
+      "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/375168/01/sv01/fnd/IND/fmt/png/Mirage-Mox-Brightly-Packed-Shoes",
+    description:
+      "With design elements inspired by the movement and motion of city life, the Wild Rider Layers Unisex. With design elements inspired by the movement and motion of city life, the Wild Rider Layers Unisex Sneakers brings a fresh new dimension to the iconic Rider family.",
+  },
+  {
+    id: 9,
+    name: "Future Rider Play On Unisex Sneakers",
+    price: "$571",
+    image:
+      "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/371149/69/sv01/fnd/IND/fmt/png/Future-Rider-Play-On-Unisex-Sneakers",
+    description:
+      "With design elements inspired by the movement and motion of city life, the Wild Rider Layers Unisex. With design elements inspired by the movement and motion of city life, the Wild Rider Layers Unisex Sneakers brings a fresh new dimension to the iconic Rider family.",
+  },
+  {
+    id: 10,
+    name: "Future Rider2 Play On Unisex Sneakers",
+    price: "$571",
+    image:
+      "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/371149/68/sv01/fnd/IND/fmt/png/Future-Rider-Play-On-Unisex-Sneakers",
+    description:
+      "With design elements inspired by the movement and motion of city life, the Wild Rider Layers Unisex. With design elements inspired by the movement and motion of city life, the Wild Rider Layers Unisex Sneakers brings a fresh new dimension to the iconic Rider family.",
+  },
+  {
+    id: 11,
+    name: "Future Rider3 Play On Unisex Sneakers",
+    price: "$571",
+    image:
+      "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/371149/72/sv01/fnd/IND/fmt/png/Future-Rider-Play-On-Unisex-Sneakers",
+    description:
+      "With design elements inspired by the movement and motion of city life, the Wild Rider Layers Unisex. With design elements inspired by the movement and motion of city life, the Wild Rider Layers Unisex Sneakers brings a fresh new dimension to the iconic Rider family.",
+  },
+  {
+    id: 12,
+    name: "Rebound Lay-Up Lo SoftFoam+Mesh Shoes",
+    price: "$571",
+    image:
+      "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/370914/01/sv01/fnd/IND/fmt/png/Rebound-Lay-Up-Lo-SoftFoam+-Mesh-Shoes",
+    description:
+      "With design elements inspired by the movement and motion of city life, the Wild Rider Layers Unisex. With design elements inspired by the movement and motion of city life, the Wild Rider Layers Unisex Sneakers brings a fresh new dimension to the iconic Rider family.",
+  },
+  
+  
+];
+
+// here we are showing shoes on web page
+function setShoesData(event) {
+  // event.preventDefault();
+
+  let allData = allShoes.map((data) => {
+    let card = `
+        <div class="card">
+        <figure>
+        <img src="${data.image}" alt="t-shirt">
+                          </figure>
+                        <div class="details">
+                          <div class="min-details">
+                          <h1>${data.name}<span>${data.description}</span></h1>
+                            <h1 class="price">${data.price}</h1>
+                            </div>
+                  
+                            </div>
+                            <a class="btn addBtn" data-item-id="${data.id}">add to cart</a>
+                            
+                            </div>
+                            </div>`;
+
+                            shoesContainer.innerHTML += card;
+  });
+}
+
+
+// here we are showing t shirts on web page
+
+
+  async function setTshirt(event) {
+      // event.preventDefault();
+    let resp = await fetch("https://fakestoreapi.com/products");
+    let resData = await resp.json();
+
+    let categoryData = resData.map((item) => {
+      if (item.category === "men's clothing") {
+    //  console.log(item);
+
+        let card = `
+        <div class="card">
+        <figure>
+        <img src="${item.image}" alt="t-shirt">
+                          </figure>
+                        <div class="details">
+                          <div class="min-details">
+                          <h1>${item.title}<span>${item.description.slice(0,100)}</span></h1>
+                            <h1 class="price">${item.price}</h1>
+                            </div>
+                  
+                            </div>
+                            <a class="btn addBtn" data-item-id="${item.id}">add to cart</a>
+                            
+                            </div>
+                            </div>`;
+
+                            productContainer.innerHTML += card;
+      }
+      });
+    }
+    
+
+
+ 
+    const allPant = [
+      {
+        id: 1,
+        name: "Wild Unisex pant",
+        price: "$121",
+        image:
+          "https://np-live-21.slatic.net/kf/Scae1ec23b06043ee91b68eabace8cd3aV.jpg_300x0q75.webp",
+        description:
+          "With design elements inspired by the movement and motion of city life, the Wild Rider Layers Unisex. With design elements inspired by the movement and motion of city life.",
+      },
+      {
+        id: 2,
+        name: "Wild Unisex pant 2",
+        price: "$151",
+        image:
+          "https://static-01.daraz.com.np/p/15b36256c8a2041a75f504fb70c7a486.jpg_300x0q75.webp",
+        description:
+          "With design elements inspired by the movement and motion of city life, the Wild Rider Layers Unisex. With design elements inspired by the movement and motion of city life.",
+      },
+      {
+        id: 3,
+        name: "Wild Unisex pant 3",
+        price: "$161",
+        image:
+          "https://static-01.daraz.com.np/p/24b4d3b853f7c3cecd44e5640d1bb96c.jpg_300x0q75.webp",
+        description:
+          "With design elements inspired by the movement and motion of city life, the Wild Rider Layers Unisex. With design elements inspired by the movement and motion of city life.",
+      },
+      {
+        id: 4,
+        name: "Wild Unisex pant 4",
+        price: "$261",
+        image:
+          "https://static-01.daraz.com.np/p/102c1670da9fcd306941ce2f32ee116a.jpg_300x0q75.webp",
+        description:
+          "With design elements inspired by the movement and motion of city life, the Wild Rider Layers Unisex. With design elements inspired by the movement and motion of city life.",
+      },
+     
+      
+      
+      
+    ];
+
+    function setPantData(event) {
+      // event.preventDefault();
+    
+      let allData = allPant.map((data) => {
+        let card = `
+            <div class="card">
+            <figure>
+            <img src="${data.image}" alt="t-shirt">
+                              </figure>
+                            <div class="details">
+                              <div class="min-details">
+                              <h1>${data.name}<span>${data.description}</span></h1>
+                                <h1 class="price">${data.price}</h1>
+                                </div>
+                      
+                                </div>
+                                <a class="btn addBtn" data-item-id="${data.id}">add to cart</a>
+                                
+                                </div>
+                                </div>`;
+    
+                                pantContainer.innerHTML += card;
+      });
+    }
+
+
+  filterItem1.addEventListener("change", ()=>{
+    if(filterItem1.value === 'shoes'){
+      setShoesData()
+     
+    } else if(filterItem1.value ==='T-shirt'){
+    setTshirt()
+      
+    } else if(filterItem1.value ==='pant'){
+     setPantData()
+    } else {
+      collections()
+    }
+  });
