@@ -33,3 +33,9 @@ making about page and all page responsive
 
 Day-9,10,11,12- 9/30/2023
 implementing all features of filter of products
+
+Day-13 9/31/2023
+make search feature on filter of products
+
+Day-14,15 10/2/2023
+just making blog page nothing special

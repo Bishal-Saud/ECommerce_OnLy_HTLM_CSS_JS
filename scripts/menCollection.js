@@ -3,6 +3,9 @@ const counterBtn = document.querySelector(".counter");
 const backCart = document.querySelector(".backCart");
 const shoesContainer = document.getElementById("shoesContainer");
 const filterItem1 = document.getElementById("product-filter_sec-items-1")
+const filterItem2 = document.getElementById("product-filter_sec-items-2")
+const filterItem3 = document.getElementById("product-filter_sec-items-3")
+const filterItem4 = document.getElementById("product-filter_sec-items-4")
 const tShirtContainer = document.getElementById("tShirtContainer")
 const menClothes = document.getElementById('tShirt')
 const pantContainer = document.getElementById('pantContainer')
@@ -10,7 +13,7 @@ let apiUrl = "https://5d76bf96515d1a0014085cf9.mockapi.io/product";
 
 //Fetching data from individual link for generate products
 async function collections() {
-  // https://fakestoreapi.com/products from this api fetch men t shirt data ----- TODO
+  
   try {
     let resp = await fetch(apiUrl);
 
@@ -68,6 +71,67 @@ async function collections() {
 
       productContainer.innerHTML = menData.join("");
     }
+
+    function search() {
+      const searchTerm = document.getElementById("product_search").value.toLowerCase();
+      // const searchResultsContainer = document.getElementById("searchResults");
+    
+      // Filter the JSON data based on the search term
+      const filteredData = productDatas.filter(item => {
+        return item.name.toLowerCase().includes(searchTerm) || item.brand.toLowerCase().includes(searchTerm);
+      });
+    
+      productContainer.innerHTML =" ";
+      shoesContainer.innerHTML =" ";
+      tShirtContainer.innerHTML =" ";
+      pantContainer.innerHTML= " ";
+  
+    
+      if (filteredData.length === 0) {
+        shoesContainer.innerHTML = "No results found.";
+      } else {
+        filteredData.forEach(item => {
+          
+
+          let dress = {
+            name: item.name,
+            brand: item.brand,
+            price: item.price,
+            preview: item.preview,
+            size: item.size,
+            photos: item.photos,
+          };
+    
+          // console.log(dress);
+    
+          // Generate cards to show product on webpage
+    
+          let card = `
+    <div class="card">
+                    <figure>
+                      <img src="${dress.preview}" alt="t-shirt">
+                    </figure>
+                    <div class="details">
+                      <div class="min-details">
+                        <h1>${dress.brand}<span>${dress.name}</span></h1>
+                        <h1 class="price">$${dress.price}</h1>
+                      </div>
+              
+                      </div>
+                      <a class="btn addBtn" data-item-id="${item.id}">add to cart</a>
+    
+                    </div>
+                  </div>`;
+
+
+         shoesContainer.innerHTML += card
+        });
+      }
+    }
+    
+    // Call the search function when the user types in the search input
+    document.getElementById("product_search").addEventListener("input", search);
+
 
     // Add cartLists on Cart button
     const addBtn = document.querySelectorAll(".addBtn");
@@ -413,6 +477,7 @@ function setShoesData(event) {
   // event.preventDefault();
 
   let allData = allShoes.map((data) => {
+ 
     let card = `
         <div class="card">
         <figure>
@@ -430,8 +495,15 @@ function setShoesData(event) {
                             </div>
                             </div>`;
 
+                            productContainer.innerHTML =" ";
+                            pantContainer.innerHTML = " ";
+                            tShirtContainer.innerHTML=" ";
                             shoesContainer.innerHTML += card;
   });
+
+
+
+  
 }
 
 
@@ -444,6 +516,8 @@ function setShoesData(event) {
     let resData = await resp.json();
 
     let categoryData = resData.map((item) => {
+   
+
       if (item.category === "men's clothing") {
     //  console.log(item);
 
@@ -463,8 +537,11 @@ function setShoesData(event) {
                             
                             </div>
                             </div>`;
+                            productContainer.innerHTML =" ";
+                            shoesContainer.innerHTML =" ";
+                            pantContainer.innerHTML = " ";
 
-                            productContainer.innerHTML += card;
+                            tShirtContainer.innerHTML += card;
       }
       });
     }
@@ -517,8 +594,13 @@ function setShoesData(event) {
 
     function setPantData(event) {
       // event.preventDefault();
+      
     
       let allData = allPant.map((data) => {
+        productContainer.innerHTML =" ";
+        shoesContainer.innerHTML =" ";
+        tShirtContainer.innerHTML =" ";
+
         let card = `
             <div class="card">
             <figure>
@@ -541,16 +623,29 @@ function setShoesData(event) {
     }
 
 
-  filterItem1.addEventListener("change", ()=>{
-    if(filterItem1.value === 'shoes'){
+    function filteringItems(event){
+      const selectedValue = event.target.value;
+    if(selectedValue=== 'shoes'){
+     
       setShoesData()
      
-    } else if(filterItem1.value ==='T-shirt'){
+    } else if(selectedValue==='T-shirt'){
+     
     setTshirt()
       
-    } else if(filterItem1.value ==='pant'){
+    } else if(selectedValue==='pant'){
+     
      setPantData()
     } else {
       collections()
     }
-  });
+  }
+
+
+  filterItem1.addEventListener("change",filteringItems)
+  filterItem2.addEventListener("change",filteringItems)
+  filterItem3.addEventListener("change",filteringItems)
+  filterItem4.addEventListener("change",filteringItems)
+  
+  
+  
