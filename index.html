@@ -33,6 +33,8 @@
             <a href="#">Cart <i class="fa-solid fa-cart-shopping"></i></a>
             <span class="counter">0</span>
           </li>
+          <button class="signIn">Sign In</button>
+          <button class="signUp">Sign Up</button>
         </ul>
       </div>
 
@@ -59,6 +61,49 @@
     <div class="showHam">
       <i class="fa-solid fa-bars"></i>
       <i class="fa-solid fa-xmark hide"></i>
+    </div>
+
+    <!-- Sign In Form  -->
+        <div class="signIn_popUp scale-up-center">
+      <h2>signIn</h2>
+      <form>
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" required autocomplete="username">
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required autocomplete="current-password">
+        </div>
+       
+      
+     
+        <button type="submit" class="signUp signInBtn">Sign In</button>
+        <p class="forget_password"><a href="#">Forget password?</a></p>
+
+</form>
+    </div>
+
+    <!-- sign Up Form  -->
+    <div class="signUp_popUp scale-up-center ">
+       <h2>signUp</h2>
+      <form>
+        <div class="form-group">
+          <label for="your_username">Username</label>
+          <input type="text" id="your_username" name="username" required autocomplete="your_username">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="text" id="email" name="email" required autocomplete="current-email">
+        </div>
+        <div class="form-group">
+          <label for="new_password">Password</label>
+          <input type="password" id="new_password" name="password" required autocomplete="current-password">
+        </div>
+        <button type="submit" class="signUp signInBtn">Sign Up</button>
+        <p class="forget_password"><a href="#">Forget password?</a></p>
+
+</form>
     </div>
     <!-- Navbar End  -->
 
@@ -164,7 +209,7 @@
             class="product-filter-select"
             id="product-filter_sec-items-2">
             <option value="selectbrand">Select Brand</option>
-            <option value="showall">Show All</option>
+            <option value="showAll">Show All</option>
             <option value="universe">Universe</option>
             <option value="Nike">Nike</option>
             <option value="toto">Toto</option>
@@ -191,11 +236,11 @@
             name="Items"
             class="product-filter-select"
             id="product-filter_sec-items-4">
-            <option value="showall">Select Price Range</option>
-            <option value="showall">Show All</option>
+            <option value="selectPrice">Select Price Range</option>
+            <option value="showAll">Show All</option>
             <option value="lower">Lower To Higher</option>
             <option value="higher">Higher to Lower</option>
-            <option value="all">All Price</option>
+            <option value="showAll">All Price</option>
           </select>
         </form>
       </div>

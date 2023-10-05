@@ -39,3 +39,6 @@ make search feature on filter of products
 
 Day-14,15 10/2/2023
 just making blog page nothing special
+
+Day-16-19 10/3/2023 - 10/6/2023
+making signup signin today 10/6/2023
