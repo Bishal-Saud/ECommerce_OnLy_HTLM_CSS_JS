@@ -1,0 +1,219 @@
+*{
+    padding: 0;
+    margin: 0;
+box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: unset;
+}
+.admin_dashboard{
+/* background-color: aqua; */
+}
+
+.admin_dashboard_bigbox{
+    display: flex;
+    flex-direction: row;
+   
+}
+.admin_dashboard_leftbox{
+    /* display: flex; */
+    display: none;
+    height: 100vh;
+    flex-direction: column;
+    /* border: 1px solid black; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    width: 16rem;
+    padding: 1rem;
+    background-color: rgba(128, 128, 128, 0.262);
+}
+
+.admin_dashboard_leftbox_btn{
+    border: 1px solid rgba(0, 0, 0, 0.349);
+    padding: 1rem;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.admin_dashboard_leftbox_btn i{
+    margin: 0 1rem;
+}
+.admin_dashboard_adminDetails_name{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.admin_dashboard_adminDetails_name span i{
+    font-size: 1rem;
+}
+.admin_dashboard_adminDetails_name p i{
+    margin: 0 1rem;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 23px;
+}
+
+.admin_dashboard_rightbox{
+    padding: 2rem;
+
+}
+
+.admin_dashboard_rightbox_container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.admin_dashboard_rightbox h2{
+font-size: 2rem;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+letter-spacing: 2px;
+}
+
+.admin_dashboard_rightbox_bigbox{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #337ab7;
+    /* padding: 1rem; */
+    margin: 1rem;
+}
+
+.admin_dashboard_smBox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid black; */
+padding: 1rem;
+background-color: #337ab7;
+color: white;
+
+
+}
+.admin_dashboard_rightbox_smBox-right{
+
+}
+.admin_dashboard_rightbox_smBox-left p{
+    font-size: 2rem;
+    font-weight: 600;
+}
+.admin_dashboard_rightbox_smBox-right i{
+    font-size: 4rem;
+   margin-right: 2rem;
+}
+
+.rightbox_btn{
+    border: none;
+    outline: none;
+    color: #337ab7;
+}
+.smBox-2{
+    background-color: #5cb85c;
+}
+
+.rightbox_btn2{
+    border: none;
+    outline: none;
+    color: #5cb85c;
+}
+
+.admin_dashboard_rightbox_bigBox_2{
+    border: 1px solid #5cb85c;
+    
+}
+
+
+.smBox-3{
+    background-color: #d9534f;
+}
+
+.rightbox_btn3{
+    border: none;
+    outline: none;
+    color: #d9534f;
+}
+
+.admin_dashboard_rightbox_bigBox_3{
+    border: 1px solid #d9534f;
+    
+}
+
+/* 4 */
+.smBox-4{
+    background-color: #f0ad4e;
+}
+
+.rightbox_btn4{
+    border: none;
+    outline: none;
+    color: #f0ad4e;
+}
+
+.admin_dashboard_rightbox_bigBox_4{
+    border: 1px solid #f0ad4e;
+    
+}
+.admin_dashboard_rightbox_chart{
+   
+}
+
+/* //responsive ham  */
+
+.admin_dashboard_hamburger{
+    position: absolute;
+    top: 9px;
+    right: 29px;
+}
+
+.admin_dashboard_hamburger .fa-bars{
+font-size: 2rem;
+}
+
+.admin_dashboard_hamburger .fa-xmark{
+font-size: 2rem;
+display: none;
+}
+
+
+.scale-in-left {
+	-webkit-animation: scale-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: scale-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+
+
+ @-webkit-keyframes scale-in-left {
+    0% {
+      -webkit-transform: scale(0);
+              transform: scale(0);
+      -webkit-transform-origin: 0% 50%;
+              transform-origin: 0% 50%;
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transform-origin: 0% 50%;
+              transform-origin: 0% 50%;
+      opacity: 1;
+    }
+  }
+  @keyframes scale-in-left {
+    0% {
+      -webkit-transform: scale(0);
+              transform: scale(0);
+      -webkit-transform-origin: 0% 50%;
+              transform-origin: 0% 50%;
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transform-origin: 0% 50%;
+              transform-origin: 0% 50%;
+      opacity: 1;
+    }
+  }
+  
+
+  

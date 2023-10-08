@@ -42,3 +42,9 @@ just making blog page nothing special
 
 Day-16-19 10/3/2023 - 10/6/2023
 making signup signin today 10/6/2023
+
+Day-20 10/4/2023
+admin and user where only admin can make post products 
+
+Day-21-22-23-24 10/8/2023
+Work on dashboard for admin 

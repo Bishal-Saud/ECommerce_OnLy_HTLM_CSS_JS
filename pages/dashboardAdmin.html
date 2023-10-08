@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin DashBoard</title>
+    <link rel="stylesheet" href="../styles/adminDashboard.css">
+</head>
+<body>
+    <section class="admin_dashboard">
+<div class="admin_dashboard_bigbox">
+    
+<div class="admin_dashboard_leftbox scale-in-left " >
+    <div class="admin_dashboard_adminDetails">
+        <div class="admin_dashboard_adminDetails_name">
+        <p><i class="fa-solid fa-user"></i>Admin</p>
+      <span>  <i class="fa-regular fa-circle-xmark"></i></span>
+        </div>
+            </div>
+<div class="admin_dashboard_leftbox_btn">
+    <a href="#">  <i class="fa-solid fa-cart-flatbed-suitcase"></i>Category</a>
+    <i class="fa-solid fa-angle-right"></i>
+</div>
+<div class="admin_dashboard_leftbox_btn">
+    <a href="#"> <i class="fa-solid fa-cart-plus"></i> Add Products</a>
+    <i class="fa-solid fa-plus"></i>
+</div>
+<div class="admin_dashboard_leftbox_btn">
+    <a href="#"> <i class="fa-solid fa-shop"></i>Shop</a>
+</div>
+<div class="admin_dashboard_leftbox_btn">
+  <a href="#"><i class="fa-solid fa-hand-holding-heart"></i>Donate</a>
+</div>
+<div class="admin_dashboard_leftbox_btn">
+  <a href="#"><i class="fa-solid fa-heart"></i>Review</a>
+</div>
+<div class="admin_dashboard_leftbox_btn">
+ <a href="#"> <i class="fa-solid fa-circle-dollar-to-slot"></i>Earning</a>
+</div>
+<div class="admin_dashboard_leftbox_btn">
+   <a href="#"><i class="fa-solid fa-right-from-bracket"></i>Logout</a>
+</div>
+</div>
+<div class="admin_dashboard_rightbox">
+<h2 class="headingDashboard">Dashboard</h2>
+
+<div class="admin_dashboard_rightbox_container">
+<!-- box 1 -->
+<div class="admin_dashboard_rightbox_bigbox">
+<div class="admin_dashboard_smBox">
+<div class="admin_dashboard_rightbox_smBox-right">
+    <i class="fa-solid fa-comments-dollar"></i>
+</div>
+<div class="admin_dashboard_rightbox_smBox-left">
+    <p class="totalNumberChat">55</p>
+    <span>New Comments !!</span>
+</div>
+</div>
+<div class="admin_dashboard_leftbox_btn rightbox_btn">
+    <a href="#">  <i class="fa-solid fa-comments-dollar"></i>Comments</a>
+    <i class="fa-solid fa-angle-right"></i>
+</div>
+</div>
+
+<!-- box 2 -->
+<div class="admin_dashboard_rightbox_bigbox admin_dashboard_rightbox_bigBox_2">
+    <div class="admin_dashboard_smBox smBox-2">
+    <div class="admin_dashboard_rightbox_smBox-right">
+        <i class="fa-solid fa-cart-shopping"></i>
+    </div>
+    <div class="admin_dashboard_rightbox_smBox-left smBox-left2">
+        <p class="totalNumberChat">155</p>
+        <span>New Orders !!</span>
+    </div>
+    </div>
+    <div class="admin_dashboard_leftbox_btn rightbox_btn2">
+        <a href="#">  <i class="fa-solid fa-cart-shopping"></i>Orders</a>
+        <i class="fa-solid fa-angle-right"></i>
+    </div>
+    </div>
+
+    <!-- box 3 -->
+<div class="admin_dashboard_rightbox_bigbox admin_dashboard_rightbox_bigBox_3">
+    <div class="admin_dashboard_smBox smBox-3">
+    <div class="admin_dashboard_rightbox_smBox-right">
+       <i class="fa-solid fa-bomb"></i>
+    </div>
+    <div class="admin_dashboard_rightbox_smBox-left smBox-left3">
+        <p class="totalNumberChat">99</p>
+        <span>New Sales !!</span>
+    </div>
+    </div>
+    <div class="admin_dashboard_leftbox_btn rightbox_btn3">
+        <a href="#"> <i class="fa-solid fa-bomb"></i>Bomb Sales</a>
+        <i class="fa-solid fa-angle-right"></i>
+    </div>
+    </div>
+
+    <!-- box 4 -->
+<div class="admin_dashboard_rightbox_bigbox admin_dashboard_rightbox_bigBox_4">
+    <div class="admin_dashboard_smBox smBox-4">
+    <div class="admin_dashboard_rightbox_smBox-right">
+       <i class="fa-solid fa-user"></i>
+    </div>
+    <div class="admin_dashboard_rightbox_smBox-left smBox-left4">
+        <p class="totalNumberChat">999</p>
+        <span>New Users !!</span>
+    </div>
+    </div>
+    <div class="admin_dashboard_leftbox_btn rightbox_btn4">
+        <a href="#"> <i class="fa-solid fa-user"></i>Users</a>
+        <i class="fa-solid fa-angle-right"></i>
+    </div>
+    </div>
+
+</div>
+
+<div class="admin_dashboard_rightbox_chart">
+    <canvas id="myChart" width="400" height="200"></canvas>
+
+</div>
+
+
+    </div>
+</div>
+</div>
+    </section>
+
+    <div class="admin_dashboard_hamburger">
+        <i class="fa-solid fa-bars"></i>
+        <i class="fa-solid fa-xmark"></i>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="../scripts/dashboard.js"></script>
+    <script>
+       // Get the canvas element
+ let ctx = document.getElementById("myChart").getContext("2d");
+      
+      // Define your data
+      let data = {
+        labels: ["Comments", "Orders", "Users","Sales"],
+        datasets: [
+          {
+            label: "Data",
+            backgroundColor: "rgba(75, 192, 192, 0.2)",
+            borderColor: "rgba(75, 192, 192, 1)",
+            borderWidth: 1,
+            data: [55, 155,999,99],
+          },
+        ],
+      };
+     
+      // Create the chart
+      let myChart = new Chart(ctx, {
+        type: "bar", // Specify the chart type
+        data: data,
+        options: {
+         scales: {
+           y: {
+             beginAtZero: true,
+           },
+         },
+         plugins: {
+           title: {
+             display: true,
+             text: "This Month Data",
+           },
+         },
+       }
+       
+      });
+      </script>
+ 
+    <script
+    src="https://kit.fontawesome.com/fb59a197fb.js"
+    crossorigin="anonymous"
+  ></script>
+</body>
+</html>

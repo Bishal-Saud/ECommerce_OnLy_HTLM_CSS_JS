@@ -65,7 +65,11 @@
 
     <!-- Sign In Form  -->
         <div class="signIn_popUp scale-up-center">
-      <h2>signIn</h2>
+      <h2>sign In</h2>
+      <span class="isAdmin"></span>
+      <p class="usernameIs">username: admin</p>
+      <p class="passwordIs"> password: admin123</p>
+
       <form>
         <div class="form-group">
           <label for="username">Username</label>
@@ -75,18 +79,16 @@
           <label for="password">Password</label>
           <input type="password" id="password" name="password" required autocomplete="current-password">
         </div>
-       
-      
      
-        <button type="submit" class="signUp signInBtn">Sign In</button>
+        <button type="submit" id="signIn_submit_btn" class="signUp signInBtn">Sign In</button>
         <p class="forget_password"><a href="#">Forget password?</a></p>
 
 </form>
     </div>
 
     <!-- sign Up Form  -->
-    <div class="signUp_popUp scale-up-center ">
-       <h2>signUp</h2>
+    <div class="signUp_popUp scale-up-center">
+       <h2>sign Up</h2>
       <form>
         <div class="form-group">
           <label for="your_username">Username</label>
@@ -100,7 +102,7 @@
           <label for="new_password">Password</label>
           <input type="password" id="new_password" name="password" required autocomplete="current-password">
         </div>
-        <button type="submit" class="signUp signInBtn">Sign Up</button>
+        <button type="submit" id="signUp_submit_btn" class="signUp signInBtn">Sign Up</button>
         <p class="forget_password"><a href="#">Forget password?</a></p>
 
 </form>
@@ -346,7 +348,8 @@
     ></script>
     <!-- <script src="./scripts/cartfunc.js"></script> -->
     <script src="./scripts/menCollection.js"></script>
-
+<script src="./scripts/signIn.js"></script>
+<script src="./scripts/signUp.js"></script>
     <script src="scripts/script.js"></script>
     <script
       type="module"

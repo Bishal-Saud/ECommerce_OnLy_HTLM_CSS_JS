@@ -123,7 +123,7 @@ button {
   background: none;
   outline: none;
   border: none;
-  margin: 10px;
+  margin: 10px ; 
   font-weight: bold;
   font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica,
     Arial, sans-serif;
@@ -203,7 +203,14 @@ button {
 .signInBtn {
   padding: 8px 15px;
 }
+.usernameIs{
+  margin: 10px 2rem;
 
+}
+
+.passwordIs{
+  margin: 0 2rem;
+}
 .signIn_popUp form {
   height: 20rem;
   padding: 1rem;
@@ -225,6 +232,7 @@ button {
 }
 .signIn_popUp .form-group {
   margin: 1rem;
+  width: 13rem;
 }
 .forget_password {
   color: rgba(0, 0, 255, 0.54);
@@ -438,6 +446,15 @@ p {
         left: 22rem;
         
       } 
+
+      .signIn_popUp {
+        top: 5rem;
+        left: 22rem;
+        
+      }
+      .navLink ul .signIn {
+        margin: 10px 0;
+      }
   .showHam {
     display: block;
   }
@@ -473,8 +490,13 @@ p {
     .signUp_popUp {
         top: 5rem;
         left: 18rem;
-        
       }    
+
+      .signIn_popUp {
+        top: 5rem;
+        left: 18rem;
+        
+      }  
       .product-filter_sec-search #product_search {
     width: 18rem;
   }
@@ -613,11 +635,16 @@ p {
 
 @media screen and (max-width: 600px) {
   .signUp_popUp {
-    left: 4rem;
+    left: 1.5rem;
 
-    top: 33rem;
+    top: 31rem;
   }
-
+  .signIn_popUp {
+       top: 31rem;
+    left: 1.5rem;
+}
+    
+  }
   .buyBtn {
     padding: 10px 21px;
   }
@@ -659,7 +686,7 @@ p {
   }
   .itemDetail img {
     width: 5rem;
-  }
+  
 }
 
 .scale-up-center {
