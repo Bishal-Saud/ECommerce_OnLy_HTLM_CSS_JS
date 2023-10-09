@@ -48,3 +48,6 @@ admin and user where only admin can make post products
 
 Day-21-22-23-24 10/8/2023
 Work on dashboard for admin 
+
+Day 25 10/9/2023
+product add ui ready but remaining work i add functionality !!

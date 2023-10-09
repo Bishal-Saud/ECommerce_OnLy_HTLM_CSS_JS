@@ -21,12 +21,10 @@ a{
     display: none;
     height: 100vh;
     flex-direction: column;
-    /* border: 1px solid black; */
-    /* justify-content: center; */
-    /* align-items: center; */
+ position: absolute;
     width: 16rem;
     padding: 1rem;
-    background-color: rgba(128, 128, 128, 0.262);
+    background-color: rgb(230 230 230);
 }
 
 .admin_dashboard_leftbox_btn{
@@ -36,6 +34,7 @@ a{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    cursor: pointer;
 
 }
 .admin_dashboard_leftbox_btn i{
@@ -57,7 +56,7 @@ a{
 }
 
 .admin_dashboard_rightbox{
-    padding: 2rem;
+    padding:  1rem;
 
 }
 
@@ -87,12 +86,11 @@ letter-spacing: 2px;
 padding: 1rem;
 background-color: #337ab7;
 color: white;
-
-
 }
 .admin_dashboard_rightbox_smBox-right{
 
 }
+
 .admin_dashboard_rightbox_smBox-left p{
     font-size: 2rem;
     font-weight: 600;
@@ -154,7 +152,8 @@ color: white;
     
 }
 .admin_dashboard_rightbox_chart{
-   
+    width: 35rem;
+    
 }
 
 /* //responsive ham  */
@@ -163,6 +162,7 @@ color: white;
     position: absolute;
     top: 9px;
     right: 29px;
+    cursor: pointer;
 }
 
 .admin_dashboard_hamburger .fa-bars{
@@ -216,4 +216,125 @@ display: none;
   }
   
 
-  
+
+
+
+/* Add Products  */
+#admin_addProducts{
+
+}
+
+.popupSection{
+ 
+
+}
+
+.popupIt{
+    display: flex;
+    position: absolute;
+    top: 5rem;
+    left: 30%;
+    display: none;
+    width: 32rem;
+    height: 27rem;
+    background-color: white;
+    border: 1px solid rgba(147, 144, 144, 0.367);
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+
+}
+#addProduct_cross{
+    position: relative;
+    top: -30px;
+    left: 230px;
+    cursor: pointer;
+
+}
+.popupIt form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.form-data{
+    border: 1px solid black;
+    padding: 8px;
+    margin: 1rem;
+    border-radius: 5px;
+}
+.detailsHeading{
+    text-align: center;
+}
+
+.product_add_btn{
+    width: 7rem;
+    padding: 10px;
+    border: none;
+    border-radius: 7px;
+}
+
+.form-data input{
+    width: 22rem;
+    height: 2rem;
+    padding: 0 10px;
+    border: none;
+    outline: none;
+    border-radius: 7px;
+}
+
+
+@media screen and (max-width:820px) {
+    .admin_dashboard_rightbox_container {
+     
+        flex-direction: column;
+    }
+    
+    .admin_dashboard_rightbox_bigbox {
+
+        width: 23rem;
+  }
+  .admin_dashboard_rightbox_chart{
+    width: 30rem;
+    
+}
+
+}
+
+@media screen and (max-width:650px) {
+.popupIt{
+    position: absolute;
+    left: 0%;
+    width: 25rem;
+}
+.form-data input {
+    width: 18rem;
+}
+#addProduct_cross {
+font-size: 24px;
+    left: 184px;
+}
+.admin_dashboard_rightbox_chart{
+    width: 25rem;
+    
+}
+}
+
+@media screen and (max-width: 370px){
+.admin_dashboard_rightbox_bigbox {
+    width: 18rem;
+}
+.admin_dashboard_rightbox_chart{
+    width: 18rem;
+    
+}
+#myChart{
+width: 20rem;
+height: 20rem;
+
+}
+.popupIt{
+    left: 0;
+    width:100%;
+}
+}

@@ -25,20 +25,15 @@ signInPopUp.addEventListener('click',showHideSignIn)
 
 function validateUser(event){
   event.preventDefault()
-  const username =  document.getElementById('username').value
-const userPassword = document.getElementById('password').value
-console.log('isusername',username);
-console.log('ispassword',userPassword);
-
+  const username =  document.getElementById('username').value.toLowerCase()
+const userPassword = document.getElementById('password').value.toLowerCase()
 if(username === 'admin' && userPassword === 'admin123'){
   window.location.href='../pages/dashboardAdmin.html'
 } else if(!username || !userPassword){
   isAdmin.style.margin ="2rem"
   isAdmin.textContent ='All field Required'
-
 }
  else{
-
   isAdmin.style.margin ="2rem"
   isAdmin.textContent ='Username or Password was Wrong !!'
   console.log('fok u user');

@@ -21,7 +21,7 @@
     <a href="#">  <i class="fa-solid fa-cart-flatbed-suitcase"></i>Category</a>
     <i class="fa-solid fa-angle-right"></i>
 </div>
-<div class="admin_dashboard_leftbox_btn">
+<div class="admin_dashboard_leftbox_btn" id="admin_addProducts">
     <a href="#"> <i class="fa-solid fa-cart-plus"></i> Add Products</a>
     <i class="fa-solid fa-plus"></i>
 </div>
@@ -38,7 +38,7 @@
  <a href="#"> <i class="fa-solid fa-circle-dollar-to-slot"></i>Earning</a>
 </div>
 <div class="admin_dashboard_leftbox_btn">
-   <a href="#"><i class="fa-solid fa-right-from-bracket"></i>Logout</a>
+   <a href="../index.html"><i class="fa-solid fa-right-from-bracket"></i>Logout</a>
 </div>
 </div>
 <div class="admin_dashboard_rightbox">
@@ -116,10 +116,9 @@
 </div>
 
 <div class="admin_dashboard_rightbox_chart">
-    <canvas id="myChart" width="400" height="200"></canvas>
+    <canvas id="myChart" width="80" height="50"></canvas>
 
 </div>
-
 
     </div>
 </div>
@@ -128,8 +127,35 @@
 
     <div class="admin_dashboard_hamburger">
         <i class="fa-solid fa-bars"></i>
-        <i class="fa-solid fa-xmark"></i>
+        <i  class="fa-solid fa-xmark"></i>
     </div>
+
+<section class="popupSection">
+  <div class="popupIt">
+<form action="#">
+  <h2 class="detailsHeading">Fill details for Products</h2>
+  <i id="addProduct_cross" class="fa-solid fa-xmark"></i>
+
+  <div class="form-data">
+    <input type="text" name="uploadImage" id="uploadImage" placeholder="Enter Image Url !">
+  </div>
+  <div class="form-data">
+  
+    <input type="text" name="title" id="title" placeholder="Enter product title !">
+  </div>
+  <div class="form-data">
+   
+    <input type="text" name="price" id="price" placeholder="Price of Product">
+  </div>
+  <div class="form-data">
+    
+    <input type="text" name="description" id="description" placeholder="Price of Description">
+  </div>
+  <button class="product_add_btn">Add</button>
+</form>
+</div>
+
+</section>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="../scripts/dashboard.js"></script>
