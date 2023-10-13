@@ -13,35 +13,102 @@
 
 
      <!-- Navbar Start  -->
+<!-- Navbar Start  -->
 
-     <nav class="navbar scale-up-center">
-      <div class="imgLogo">
-        <p><a href="../index.html">Shopi-Tik</a></p>
-        <img src="../images/logo.png" alt="Logo" />
-      </div>
-      <div class="searchComponent">
-        <input id="search" type="text" placeholder="Search Products" />
-        <i class="fa-solid fa-magnifying-glass"></i>
-      </div>
-      <div class="navLink">
-        <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="./about.html">About</a></li>
-          <li><a href="./addTOcart.html">Products</a></li>
-          <li><a href="./blog.html">Blog</a></li>
-          <li id="cartBox">
-            <a href="#">Cart <i class="fa-solid fa-cart-shopping"></i></a>
-            <span class="counter">0</span>
-          </li>
-        </ul>
-      </div>
-    </nav>
+<nav class="navbar scale-up-center">
+  <p class="webName">
+    @Premium-<span>Hub</span><i class="fa-solid fa-sack-dollar"></i>
+  </p>
+  <div class="imgLogo">
+    <!-- <img src="./images/logo.png" alt="Logo" /> -->
+  </div>
+  <div class="searchComponent">
+    <input id="search" type="text" placeholder="Search Products" />
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </div>
+  <div class="navLink">
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="./pages/about.html">About</a></li>
+      <li><a href="/pages/addTOcart.html" id="products">Products</a></li>
+      <li><a href="./pages/blog.html">Blog</a></li>
+      <li id="cartBox">
+        <a href="#">Cart <i class="fa-solid fa-cart-shopping"></i></a>
+        <span class="counter">0</span>
+      </li>
+      <button class="signIn">Sign In</button>
+      <button class="signUp">Sign Up</button>
+    </ul>
+  </div>
 
-    <div class="showHam">
-      <i class="fa-solid fa-bars"></i>
+  <div class="product-links">
+    <li><a href="./index.html">Men's Clothes</a></li>
+    <li><a href="./pages/about.html">Women Clothes</a></li>
+    <li><a href="/pages/addTOcart.html">Shoes</a></li>
+    <li><a href="#">T-Shirt</a></li>
+    <li><a href="./index.html">Shirt Pant</a></li>
+    <li><a href="./pages/about.html">New Arrivals</a></li>
+    <li><a href="/pages/addTOcart.html">Old Fashion</a></li>
+    <li><a href="#">Hip-Hop</a></li>
+    <li><a href="./index.html">Expensive Products</a></li>
+    <li><a href="./pages/about.html">Sales</a></li>
+    <li><a href="/pages/addTOcart.html">Cups</a></li>
+    <li><a href="#">School Dress</a></li>
+    <li><a href="./index.html">Night Dress</a></li>
+    <li><a href="./pages/about.html">Swimming costume</a></li>
+    <li><a href="/pages/addTOcart.html">Jersey's</a></li>
+    <li><a href="#">Half T-Shirts</a></li>
+  </div>
+</nav>
 
-      <i class="fa-solid fa-xmark hide"></i>
+<div class="showHam">
+  <i class="fa-solid fa-bars"></i>
+  <i class="fa-solid fa-xmark hide"></i>
+</div>
+
+ <!-- Sign In Form  -->
+ <div class="signIn_popUp scale-up-center">
+  <h2>sign In</h2>
+  <span class="isAdmin"></span>
+  <p class="usernameIs">username: admin</p>
+  <p class="passwordIs"> password: admin123</p>
+  <form>
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" required autocomplete="username">
     </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required autocomplete="current-password">
+    </div>
+    <button type="submit" id="signIn_submit_btn" class="signUp signInBtn">Sign In</button>
+    <p class="forget_password"><a href="#">Forget password?</a></p>
+
+</form>
+</div>
+
+<!-- sign Up Form  -->
+<div class="signUp_popUp scale-up-center">
+   <h2>sign Up</h2>
+  <form>
+    <div class="form-group">
+      <label for="your_username">Username</label>
+      <input type="text" id="your_username" name="username" required autocomplete="your_username">
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="text" id="email" name="email" required autocomplete="current-email">
+    </div>
+    <div class="form-group">
+      <label for="new_password">Password</label>
+      <input type="password" id="new_password" name="password" required autocomplete="current-password">
+    </div>
+    <button type="submit" id="signUp_submit_btn" class="signUp signInBtn">Sign Up</button>
+    <p class="forget_password"><a href="#">Forget password?</a></p>
+
+</form>
+</div>
+
     <!-- Navbar End  -->
 
 <section class="about_showImg">
@@ -139,6 +206,7 @@ src="https://kit.fontawesome.com/fb59a197fb.js"
 crossorigin="anonymous"
 ></script>
 <script src="../scripts/script.js"></script>
-
+<script src="../scripts/signIn.js"></script>
+<script src="../scripts/signUp.js"></script>
 </body>
 </html>

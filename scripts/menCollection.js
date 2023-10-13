@@ -12,6 +12,7 @@ const pantContainer = document.getElementById("pantContainer");
 let apiUrl = "https://5d76bf96515d1a0014085cf9.mockapi.io/product";
 const cartList = document.querySelector(".cartList");
 
+
 //Fetching data from individual link for generate products
 async function collections() {
   try {
@@ -97,6 +98,8 @@ document.addEventListener('DOMContentLoaded', () => {
       // Retrieve the data-item-id attribute from the clicked button
       const itemId = clickedBtn.getAttribute('data-item-id');
 
+
+      
       // Increase the count
       count++;
       counterBtn.innerHTML = count;
@@ -127,6 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
 
 
 
@@ -192,6 +196,7 @@ function search() {
                     </div>
                   </div>`;
 
+
       shoesContainer.innerHTML += card;
     });
   }
@@ -201,8 +206,9 @@ function search() {
 document.getElementById("product_search").addEventListener("input", search);
 
 // // Add cartLists on Cart button
-// const addBtn = document.querySelectorAll(".addBtn");
+const addBtn = document.querySelectorAll(".addBtn");
 // const cartList = document.querySelector(".cartList");
+
 
 let carts = [];
 let totalPrice = 0;
@@ -309,8 +315,7 @@ function showCart(item) {
     let add = parseInt(counters[index].textContent);
     btn.addEventListener("click", () => {
       add++;
-
-      if (add) {
+      if(add) {
         counters[index].textContent = add;
       }
 
@@ -326,10 +331,11 @@ function showCart(item) {
   // to decrement the price and items
   decrement.forEach((btn, index) => {
     let sub = parseInt(counters[index].textContent);
-
     btn.addEventListener("click", () => {
       sub--;
+
       counters[index].textContent = sub;
+     
       let itemPrice = parseFloat(
         priceElements[index].getAttribute("data-price")
       );
@@ -399,7 +405,7 @@ if(dataFromCarts == null || undefined){
 }else{
 
   
-  dataFromCarts.forEach((item) => {
+dataFromCarts.forEach((item) => {
     if(!item){
       console.log('no item ');
     } else{

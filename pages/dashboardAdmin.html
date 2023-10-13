@@ -7,6 +7,102 @@
     <link rel="stylesheet" href="../styles/adminDashboard.css">
 </head>
 <body>
+  <!-- Navbar Start  -->
+
+  <nav class="navbar scale-up-center">
+    <p class="webName">
+      @Premium-<span>Hub</span><i class="fa-solid fa-sack-dollar"></i>
+    </p>
+    <div class="imgLogo">
+      <!-- <img src="./images/logo.png" alt="Logo" /> -->
+    </div>
+    <div class="searchComponent">
+      <input id="search" type="text" placeholder="Search Products" />
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </div>
+    <div class="navLink">
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./pages/about.html">About</a></li>
+        <li><a href="/pages/addTOcart.html" id="products">Products</a></li>
+        <li><a href="./pages/blog.html">Blog</a></li>
+        <li id="cartBox">
+          <a href="#">Cart <i class="fa-solid fa-cart-shopping"></i></a>
+          <span class="counter">0</span>
+        </li>
+        <button class="signIn">Sign In</button>
+        <button class="signUp">Sign Up</button>
+      </ul>
+    </div>
+
+    <div class="product-links">
+      <li><a href="./index.html">Men's Clothes</a></li>
+      <li><a href="./pages/about.html">Women Clothes</a></li>
+      <li><a href="/pages/addTOcart.html">Shoes</a></li>
+      <li><a href="#">T-Shirt</a></li>
+      <li><a href="./index.html">Shirt Pant</a></li>
+      <li><a href="./pages/about.html">New Arrivals</a></li>
+      <li><a href="/pages/addTOcart.html">Old Fashion</a></li>
+      <li><a href="#">Hip-Hop</a></li>
+      <li><a href="./index.html">Expensive Products</a></li>
+      <li><a href="./pages/about.html">Sales</a></li>
+      <li><a href="/pages/addTOcart.html">Cups</a></li>
+      <li><a href="#">School Dress</a></li>
+      <li><a href="./index.html">Night Dress</a></li>
+      <li><a href="./pages/about.html">Swimming costume</a></li>
+      <li><a href="/pages/addTOcart.html">Jersey's</a></li>
+      <li><a href="#">Half T-Shirts</a></li>
+    </div>
+  </nav>
+
+  <div class="showHam">
+    <i class="fa-solid fa-bars"></i>
+    <i class="fa-solid fa-xmark hide"></i>
+  </div>
+
+   <!-- Sign In Form  -->
+   <div class="signIn_popUp scale-up-center">
+    <h2>sign In</h2>
+    <span class="isAdmin"></span>
+    <p class="usernameIs">username: admin</p>
+    <p class="passwordIs"> password: admin123</p>
+    <form>
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required autocomplete="username">
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required autocomplete="current-password">
+      </div>
+      <button type="submit" id="signIn_submit_btn" class="signUp signInBtn">Sign In</button>
+      <p class="forget_password"><a href="#">Forget password?</a></p>
+
+</form>
+  </div>
+
+  <!-- sign Up Form  -->
+  <div class="signUp_popUp scale-up-center">
+     <h2>sign Up</h2>
+    <form>
+      <div class="form-group">
+        <label for="your_username">Username</label>
+        <input type="text" id="your_username" name="username" required autocomplete="your_username">
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" required autocomplete="current-email">
+      </div>
+      <div class="form-group">
+        <label for="new_password">Password</label>
+        <input type="password" id="new_password" name="password" required autocomplete="current-password">
+      </div>
+      <button type="submit" id="signUp_submit_btn" class="signUp signInBtn">Sign Up</button>
+      <p class="forget_password"><a href="#">Forget password?</a></p>
+
+</form>
+  </div>
+<!-- navbar end  -->
     <section class="admin_dashboard">
 <div class="admin_dashboard_bigbox">
     
@@ -17,16 +113,27 @@
       <span>  <i class="fa-regular fa-circle-xmark"></i></span>
         </div>
             </div>
-<div class="admin_dashboard_leftbox_btn">
-    <a href="#">  <i class="fa-solid fa-cart-flatbed-suitcase"></i>Category</a>
-    <i class="fa-solid fa-angle-right"></i>
-</div>
+
+   
+    
+  
+    <select name="category" id="admin_category" class="admin_dashboard_leftbox_btn">
+      <option value="category">category</option>
+      <option value="saab">Men's and Women</option>
+      <option value="audi">New Arrivals</option>
+      <option value="opel">Expensive</option>
+    </select>
+
+
+
+
+    
 <div class="admin_dashboard_leftbox_btn" id="admin_addProducts">
     <a href="#"> <i class="fa-solid fa-cart-plus"></i> Add Products</a>
     <i class="fa-solid fa-plus"></i>
 </div>
 <div class="admin_dashboard_leftbox_btn">
-    <a href="#"> <i class="fa-solid fa-shop"></i>Shop</a>
+    <a href="../index.html"> <i class="fa-solid fa-shop"></i>Shop</a>
 </div>
 <div class="admin_dashboard_leftbox_btn">
   <a href="#"><i class="fa-solid fa-hand-holding-heart"></i>Donate</a>
@@ -35,6 +142,7 @@
   <a href="#"><i class="fa-solid fa-heart"></i>Review</a>
 </div>
 <div class="admin_dashboard_leftbox_btn">
+
  <a href="#"> <i class="fa-solid fa-circle-dollar-to-slot"></i>Earning</a>
 </div>
 <div class="admin_dashboard_leftbox_btn">
@@ -157,6 +265,69 @@
 
 </section>
 
+ <!-- Footer Here  -->
+ <footer class="footer">
+  <div class="footerLogo">
+    <img src="../images/logo.png" alt="Logo" />
+    <p class="webName">@Premium-<span>Hub</span><i class="fa-solid fa-sack-dollar"></i></p>
+
+  </div>
+  <div class="socialMediaLinks">
+    <span>Contact Us :</span>
+    <i class="fa-brands fa-x-twitter"></i>
+    <i class="fa-brands fa-instagram"></i>
+    <i class="fa-brands fa-linkedin"></i>
+    <i class="fa-brands fa-facebook"></i>
+  </div>
+  <div class="footerLinks">
+    <div class="navFooter">
+      <h3>Go to Top</h3>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./addTOcart.html">Products</a></li>
+        <li><a href="./blog.html">Blog</a></li>
+      </ul>
+    </div>
+
+    <div class="navFooter">
+      <h3>Social Media</h3>
+
+      <ul>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Linkedin</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Twitter</a></li>
+      </ul>
+    </div>
+
+    <div class="navFooter">
+      <h3>Collections</h3>
+
+      <ul>
+        <li><a href="#">New Arrivals</a></li>
+        <li><a href="#">Expensive Items</a></li>
+        <li><a href="#">Discount Coupon </a></li>
+        <li><a href="#">Budget Products</a></li>
+      </ul>
+    </div>
+
+    <div class="navFooter">
+      <h3>International Location</h3>
+
+      <ul>
+        <li><a href="#">Nepal</a></li>
+        <li><a href="#">India</a></li>
+        <li><a href="#">USA</a></li>
+        <li><a href="#">China</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<!-- Footer End  -->
+
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="../scripts/dashboard.js"></script>
     <script>
@@ -197,10 +368,12 @@
        
       });
       </script>
- 
+ <script src="../scripts/signIn.js"></script>
+ <script src="../scripts/signUp.js"></script>
     <script
     src="https://kit.fontawesome.com/fb59a197fb.js"
     crossorigin="anonymous"
   ></script>
+  <script src="../scripts/script.js"></script>
 </body>
 </html>
